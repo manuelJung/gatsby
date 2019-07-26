@@ -17,6 +17,7 @@ const write = async ({ publicDir }, page, result, webpackCompilationHash) => {
   const filePath = getFilePath({ publicDir }, page.path)
   const body = {
     componentChunkName: page.componentChunkName,
+    widgetChunkNames: page.widgetChunkNames,
     path: page.path,
     matchPath: page.matchPath,
     webpackCompilationHash,

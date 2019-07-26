@@ -156,6 +156,14 @@ export default (pagePath, callback) => {
         pathContext: pageData.result ? pageData.result.pageContext : undefined,
       }
 
+      if (pageData.widgetChunkNames) {
+        props.widgets = {}
+        for (let key in pageData.widgetChunkNames) {
+          props.widgets[key] =
+            syncRequires.components[pageData.widgetChunkNames[key]]
+        }
+      }
+
       const pageElement = createElement(
         syncRequires.components[componentChunkName],
         props
@@ -221,8 +229,9 @@ export default (pagePath, callback) => {
   }
 
   // Create paths to scripts
+  const widgetChunkPaths = Object.values(pageData.widgetChunkNames || {})
   let scriptsAndStyles = flatten(
-    [`app`, componentChunkName].map(s => {
+    [`app`, componentChunkName, ...widgetChunkPaths].map(s => {
       const fetchKey = `assetsByChunkName[${s}]`
 
       let chunks = get(stats, fetchKey)

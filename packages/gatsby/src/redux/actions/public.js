@@ -14,7 +14,10 @@ const { trackInlineObjectsInRootNode } = require(`../../db/node-tracking`)
 const { store } = require(`..`)
 const fileExistsSync = require(`fs-exists-cached`).sync
 const joiSchemas = require(`../../joi-schemas/joi`)
-const { generateComponentChunkName } = require(`../../utils/js-chunk-names`)
+const {
+  generateComponentChunkName,
+  generateWidgetChunkName,
+} = require(`../../utils/js-chunk-names`)
 const apiRunnerNode = require(`../../utils/api-runner-node`)
 const { trackCli } = require(`gatsby-telemetry`)
 
@@ -44,6 +47,7 @@ type PageInput = {
   path: string,
   component: string,
   context?: Object,
+  widgets?: { [name: string]: string },
 }
 
 type Page = {
@@ -54,6 +58,8 @@ type Page = {
   internalComponentName: string,
   componentChunkName: string,
   updatedAt: number,
+  widgets?: { [name: string]: string },
+  widgetChunkNames?: { [name: string]: string },
 }
 
 type ActionOptions = {
@@ -144,6 +150,8 @@ actions.createPage = (
       `componentChunkName`,
       `pluginCreator___NODE`,
       `pluginCreatorId`,
+      `widgets`,
+      `widgetChunkNames`,
     ]
     const invalidFields = Object.keys(_.pick(page.context, reservedFields))
 
@@ -310,6 +318,16 @@ ${reservedFields.map(f => `  * "${f}"`).join(`\n`)}
     // Ensure the page has a context object
     context: page.context || {},
     updatedAt: Date.now(),
+  }
+
+  if (page.widgets) {
+    internalPage.widgets = page.widgets
+    internalPage.widgetChunkNames = {}
+    for (let key in page.widgets) {
+      internalPage.widgetChunkNames[key] = generateWidgetChunkName(
+        page.widgets[key]
+      )
+    }
   }
 
   // If the path doesn't have an initial forward slash, add it.

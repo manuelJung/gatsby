@@ -13,9 +13,28 @@ const resetLastHash = () => {
 const pickComponentFields = page =>
   _.pick(page, [`component`, `componentChunkName`])
 
+const pickWidgetFields = page => {
+  let fields = []
+  if (page.widgets) {
+    for (let key in page.widgets) {
+      fields.push({
+        component: page.widgets[key],
+        componentChunkName: page.widgetChunkNames[key],
+      })
+    }
+  }
+  return fields
+}
+
 const getComponents = pages =>
   _(pages)
     .map(pickComponentFields)
+    .uniqBy(c => c.componentChunkName)
+    .value()
+
+const getWidgets = pages =>
+  _(pages)
+    .flatMap(pickWidgetFields)
     .uniqBy(c => c.componentChunkName)
     .value()
 
@@ -36,6 +55,7 @@ const writeAll = async state => {
   const pages = [...state.pages.values()]
   const matchPaths = getMatchPaths(pages)
   const components = getComponents(pages)
+  const widgets = getWidgets(pages)
 
   const newHash = createHash(matchPaths, components)
 
@@ -52,7 +72,7 @@ const writeAll = async state => {
 // prefer default export if available
 const preferDefault = m => m && m.default || m
 \n\n`
-  syncRequires += `exports.components = {\n${components
+  syncRequires += `exports.components = {\n${[...components, ...widgets]
     .map(
       c =>
         `  "${c.componentChunkName}": hot(preferDefault(require("${joinPath(
@@ -66,7 +86,7 @@ const preferDefault = m => m && m.default || m
   let asyncRequires = `// prefer default export if available
 const preferDefault = m => m && m.default || m
 \n`
-  asyncRequires += `exports.components = {\n${components
+  asyncRequires += `exports.components = {\n${[...components, ...widgets]
     .map(
       c =>
         `  "${c.componentChunkName}": () => import("${joinPath(
