@@ -2,8 +2,10 @@
 import mock from "xhr-mock"
 import { ProdLoader } from "../loader"
 import emitter from "../emitter"
+import prefetchHelper from "../prefetch"
 
 jest.mock(`../emitter`)
+jest.mock(`../prefetch`)
 
 describe(`Production loader`, () => {
   describe(`loadPageDataJson`, () => {
@@ -604,6 +606,98 @@ describe(`Production loader`, () => {
         2,
         `onPostPrefetchPathname`,
         expect.anything()
+      )
+    })
+
+    it(`should prefetch widgets`, async () => {
+      prefetchHelper.mockImplementation(() => Promise.resolve())
+      const prodLoader = new ProdLoader(null, [])
+      global.__PATH_PREFIX__ = ``
+      global.___chunkMapping = {
+        "component-chunk-name": [`component-chunk-name-hash`],
+        "widget-chunk-name": [`widget-chunk-name-hash`],
+      }
+      prodLoader.shouldPrefetch = jest.fn(() => true)
+      prodLoader.apiRunner = jest.fn()
+      prodLoader.loadPageDataJson = jest.fn(() =>
+        Promise.resolve({
+          status: `success`,
+          payload: {
+            componentChunkName: `component-chunk-name`,
+            widgetChunkNames: {
+              WidgetA: `widget-chunk-name`,
+            },
+          },
+        })
+      )
+      await prodLoader.doPrefetch(`/mypath/`)
+
+      expect(prefetchHelper).toHaveBeenCalledWith(`widget-chunk-name-hash`)
+    })
+  })
+
+  describe(`loadWidgets`, () => {
+    const rawWidgets = {
+      WidgetA: `path-to-widget-a`,
+      WidgetB: `path-to-widget-b`,
+    }
+
+    it(`should resolve null if no widgets were set`, async () => {
+      const prodLoader = new ProdLoader(null, [])
+      const widgets = await prodLoader.loadWidgets(undefined)
+      expect(widgets).toEqual(null)
+    })
+
+    it(`should load all defined widgets`, async () => {
+      const prodLoader = new ProdLoader(null, [])
+      prodLoader.loadComponent = jest.fn()
+      await prodLoader.loadWidgets(rawWidgets)
+
+      expect(prodLoader.loadComponent).toHaveBeenCalledTimes(2)
+      expect(prodLoader.loadComponent).toHaveBeenNthCalledWith(
+        1,
+        `path-to-widget-a`
+      )
+      expect(prodLoader.loadComponent).toHaveBeenNthCalledWith(
+        2,
+        `path-to-widget-b`
+      )
+    })
+
+    it(`should add loaded widgets to widget-db`, async () => {
+      const prodLoader = new ProdLoader(null, [])
+      prodLoader.loadComponent = jest.fn()
+      await prodLoader.loadWidgets(rawWidgets)
+      expect(prodLoader.widgetDb.size).toBe(2)
+    })
+
+    it(`should load each widget only once`, async () => {
+      const prodLoader = new ProdLoader(null, [])
+      prodLoader.loadComponent = jest.fn()
+      prodLoader.widgetDb.set(`WidgetA`, `component`)
+      await prodLoader.loadWidgets(rawWidgets)
+      expect(prodLoader.loadComponent).toHaveBeenCalledTimes(1)
+      expect(prodLoader.loadComponent).toHaveBeenCalledWith(`path-to-widget-b`)
+    })
+
+    it(`should be called from loadPages with page-data widgetChunkNames`, async () => {
+      const pageData = {
+        status: `success`,
+        payload: {
+          widgetChunkNames: {
+            WidgetA: `path-to-widget-a`,
+          },
+        },
+      }
+      global.__BASE_PATH__ = ``
+      const prodLoader = new ProdLoader(null, [])
+      prodLoader.loadWidgets = jest.fn()
+      prodLoader.loadComponent = jest.fn()
+      prodLoader.loadPageDataJson = jest.fn(() => Promise.resolve(pageData))
+      await prodLoader.loadPage(`/mypath/`)
+      expect(prodLoader.loadWidgets).toHaveBeenCalledTimes(1)
+      expect(prodLoader.loadWidgets).toHaveBeenCalledWith(
+        pageData.payload.widgetChunkNames
       )
     })
   })

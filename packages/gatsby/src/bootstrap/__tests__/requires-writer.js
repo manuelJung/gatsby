@@ -1,7 +1,7 @@
 const { joinPath } = require(`gatsby-core-utils`)
 const requiresWriter = require(`../requires-writer`)
 
-const now = Date.now()
+const now = 1564229078922
 
 const newMockState = () => {
   const pages = new Map()
@@ -14,6 +14,12 @@ const newMockState = () => {
   pages.set(`path2`, {
     component: `component2`,
     componentChunkName: `chunkName2`,
+    widgets: {
+      WidgetA: `widget1`,
+    },
+    widgetChunkNames: {
+      WidgetA: `widgetChunkName1`,
+    },
     path: `/path2`,
   })
   const program = { directory: `/dir` }
@@ -42,6 +48,7 @@ describe(`requires-writer`, () => {
         joinPath(`/dir`, `.cache`, `match-paths.json.${now}`),
         JSON.stringify([{ path: `/path1`, matchPath: `matchPath1` }], null, 4)
       )
+      expect(spy).toMatchSnapshot()
     })
   })
 })

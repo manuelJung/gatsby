@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`requires-writer writeAll writes requires files 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "/dir/.cache/sync-requires.js.1564229078922",
+      "const { hot } = require(\\"react-hot-loader/root\\")
+
+// prefer default export if available
+const preferDefault = m => m && m.default || m
+
+
+exports.components = {
+  \\"chunkName1\\": hot(preferDefault(require(\\"component1\\"))),
+  \\"chunkName2\\": hot(preferDefault(require(\\"component2\\"))),
+  \\"widgetChunkName1\\": hot(preferDefault(require(\\"widget1\\")))
+}
+
+",
+    ],
+    Array [
+      "/dir/.cache/async-requires.js.1564229078922",
+      "// prefer default export if available
+const preferDefault = m => m && m.default || m
+
+exports.components = {
+  \\"chunkName1\\": () => import(\\"component1\\" /* webpackChunkName: \\"chunkName1\\" */),
+  \\"chunkName2\\": () => import(\\"component2\\" /* webpackChunkName: \\"chunkName2\\" */),
+  \\"widgetChunkName1\\": () => import(\\"widget1\\" /* webpackChunkName: \\"widgetChunkName1\\" */)
+}
+
+",
+    ],
+    Array [
+      "/dir/.cache/match-paths.json.1564229078922",
+      "[
+    {
+        \\"path\\": \\"/path1\\",
+        \\"matchPath\\": \\"matchPath1\\"
+    }
+]",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;

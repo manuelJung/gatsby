@@ -388,9 +388,9 @@ export class ProdLoader extends BaseLoader {
           componentUrls = [].concat(componentUrls, ...widgetUrls)
         }
 
-        return Promise.all(componentUrls.map(prefetchHelper)).then(
-          () => pageData
-        )
+        return Promise.all(
+          componentUrls.map(hash => prefetchHelper(hash))
+        ).then(() => pageData)
       })
   }
 }
