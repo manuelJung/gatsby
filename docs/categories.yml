@@ -5,6 +5,7 @@ starter:
   - AWS
   - Blog
   - Client-side App
+  - CMS:Agility CMS
   - CMS:Cosmic JS
   - CMS:Headless
   - CMS:Contentful
@@ -12,16 +13,22 @@ starter:
   - CMS:Drupal
   - CMS:Prismic
   - CMS:Netlify
-  - CMS:Wordpress
+  - CMS:WordPress
   - CMS:sanity.io
+  - CMS:Strapi
+  - CMS:Kontent
+  - CMS:Forestry.io
   - CMS:Other
   - Disqus
   - Documentation
   - eCommerce
   - Firebase
+  - Gallery
   - Google Sheets
+  - Hasura
   - HTML5UP
   - i18n
+  - Infinite Scroll
   - Landing Page
   - Language:Other
   - Language:TypeScript
@@ -40,6 +47,7 @@ starter:
   - Search
   - SEO
   - Shopify
+  - Square
   - Storybook
   - Stripe
   - Styling:Ant Design
@@ -51,6 +59,8 @@ starter:
   - Styling:PostCSS
   - Styling:SCSS
   - Styling:Tailwind
+  - Styling:Theme-UI
+  - Styling:Milligram
   - Styling:Other
   - Styling:None
   - Testing
@@ -81,7 +91,9 @@ site:
   - Gallery
   - Government
   - Healthcare
+  - Human Resources
   - JavaScript
+  - Law
   - Landing Page
   - Learning
   - Library
@@ -97,6 +109,7 @@ site:
   - Productivity
   - Programming
   - Real Estate
+  - Retail
   - SEO
   - Science
   - Security

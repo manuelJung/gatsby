@@ -1,3 +1,8 @@
+jest.mock(`../browserslist`, () => {
+  return {
+    getBrowsersList: () => [],
+  }
+})
 jest.mock(`webpack`, () => {
   return {
     ...jest.requireActual(`webpack`),
@@ -17,6 +22,22 @@ const { DefinePlugin } = require(`webpack`)
 const { readFileSync } = require(`fs-extra`)
 const webpackConfig = require(`../webpack.config`)
 const { store } = require(`../../redux`)
+
+jest.mock(`gatsby-cli/lib/reporter`, () => {
+  return {
+    log: jest.fn(),
+    info: jest.fn(),
+    warn: jest.fn(),
+    error: jest.fn(),
+    activityTimer: () => {
+      return {
+        start: jest.fn(),
+        setStatus: jest.fn(),
+        end: jest.fn(),
+      }
+    },
+  }
+})
 
 beforeEach(() => {
   DefinePlugin.mockClear()

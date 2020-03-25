@@ -2,9 +2,9 @@ const _ = require(`lodash`)
 const { WebClient } = require("@slack/web-api")
 const prMessage = require(`./pr-message`)
 const { Toolkit } = require("actions-toolkit")
-const parse = require("date-fns/parse")
-const isBefore = require("date-fns/is_before")
-const differenceInDays = require("date-fns/difference_in_days")
+const parseISO = require("date-fns/parseISO")
+const isBefore = require("date-fns/isBefore")
+const differenceInDays = require("date-fns/differenceInDays")
 const tools = new Toolkit({
   secrets: [
     "PERSONAL_GITHUB_TOKEN",
@@ -122,9 +122,13 @@ const processData = (data, now = new Date()) => {
   prs.nodes.forEach(pr => {
     pr.participants = {}
     pr.participants.nodes = _.uniqBy(
-      pr.comments.nodes.filter(c => c.author.url != pr.author.url).map(c => {
-        return { url: c.author.url }
-      }),
+      pr.comments.nodes
+        .filter(c => {
+          return c.author && pr.author && c.author.url != pr.author.url
+        })
+        .map(c => {
+          return { url: c.author.url }
+        }),
       node => node.url
     )
   })
@@ -162,11 +166,11 @@ const processData = (data, now = new Date()) => {
   // What PRs have commits (aka activity) since the last comment by
   // a maintainer.
   prs.nodes.forEach(pr => {
-    const authorUrl = pr.author.url
+    const authorUrl = pr.author ? pr.author.url : ""
     const botUrl = "https://github.com/apps/gatsbot"
 
     const reviewList = pr.comments.nodes.filter(
-      x => x.author.url !== authorUrl && x.author.url !== botUrl
+      x => x.author && x.author.url !== authorUrl && x.author.url !== botUrl
     )
     const lastComment = _.get(
       _.maxBy(reviewList, n => n.createdAt),
@@ -199,9 +203,9 @@ const processData = (data, now = new Date()) => {
   // lonely PRs - open PRs that haven't been updated for at least 30 days
   const DAYS_TO_LONELY = 30
   const prIsLonely = pr =>
-    differenceInDays(now, parse(pr.updatedAt)) > DAYS_TO_LONELY
+    differenceInDays(now, parseISO(pr.updatedAt)) > DAYS_TO_LONELY
   const prsByDate = (a, b) =>
-    isBefore(parse(a.updatedAt), parse(b.updatedAt)) ? -1 : 1
+    isBefore(parseISO(a.updatedAt), parseISO(b.updatedAt)) ? -1 : 1
   const lonely = prs.nodes.filter(prIsLonely).sort(prsByDate)
   queues.lonelyPrs.push(...lonely)
 
@@ -230,6 +234,12 @@ const report = ({ queues, channelId }) => {
         channel: channelId,
         blocks: report,
       })
+
+      // When ok is false we should throw
+      // @see https://api.slack.com/methods/chat.postMessage#response
+      if (!res.ok) {
+        throw new Error(res.error)
+      }
 
       // `res` contains information about the posted message
       tools.log.success("Message sent: ", res.ts)

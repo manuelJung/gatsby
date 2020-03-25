@@ -34,10 +34,14 @@ export const gatsbyConfigSchema = Joi.object()
     }).unknown(),
     mapping: Joi.object(),
     plugins: Joi.array(),
-    proxy: Joi.object().keys({
-      prefix: Joi.string().required(),
-      url: Joi.string().required(),
-    }),
+    proxy: Joi.array()
+      .items(
+        Joi.object().keys({
+          prefix: Joi.string().required(),
+          url: Joi.string().required(),
+        })
+      )
+      .single(),
     developMiddleware: Joi.func(),
   })
   // throws when both assetPrefix and pathPrefix are defined
@@ -97,9 +101,8 @@ export const nodeSchema = Joi.object()
         content: Joi.string().allow(``),
         description: Joi.string(),
         ignoreType: Joi.boolean(),
+        counter: Joi.number(),
       })
-      .unknown({
-        allow: false,
-      }), // Don't allow non-standard fields
+      .unknown(false), // Don't allow non-standard fields
   })
   .unknown()

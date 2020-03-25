@@ -98,9 +98,10 @@ gives examples. In sum, I created a `gatsby-node.js` file which exports
 This might sound way more complicated than what it is:
 
 ```jsx
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
-  graphql(`
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const result = await graphql(`
     {
       allMarkdownRemark {
         edges {
@@ -114,10 +115,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     }
-  `).then(result => {
-    const posts = result.data.allMarkdownRemark.edges
-    // Create content programmatically here
-  })
+  `)
+
+  const posts = result.data.allMarkdownRemark.edges
+  // Create content programmatically here
 }
 ```
 
@@ -171,7 +172,7 @@ Steps were:
 Add `gatsby-plugin-typography` and `typography-theme-moraga` (for example) and
 "enable" the plugin in the `gatsby-config.js` file:
 
-```javascript=
+```javascript
 {
   resolve: `gatsby-plugin-typography`,
   options: {
@@ -182,7 +183,7 @@ Add `gatsby-plugin-typography` and `typography-theme-moraga` (for example) and
 
 In `src/utils/typograhy` add:
 
-```javascript=
+```javascript
 import Typography from "typography"
 import theme from "typography-theme-moraga"
 
@@ -238,9 +239,9 @@ const createPostPages = require(`./gatsby-actions/createPostPages`)
 const createPaginatedPostsPages = require(`./gatsby-actions/createPaginatedPostsPages`)
 const createTagPages = require(`./gatsby-actions/createTagPages`)
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
-  graphql(`
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(`
     {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
@@ -254,12 +255,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     }
-  `).then(result => {
-    const posts = result.data.allMarkdownRemark.edges
-    createPostPages(createPage, posts)
-    createPaginatedPostsPages(createPage, posts)
-    createTagPages(createPage, posts)
-  })
+  `
+
+  const posts = result.data.allMarkdownRemark.edges
+  createPostPages(createPage, posts)
+  createPaginatedPostsPages(createPage, posts)
+  createTagPages(createPage, posts)
 }
 ```
 

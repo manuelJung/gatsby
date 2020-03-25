@@ -1,24 +1,26 @@
-const visit = require("unist-util-visit");
-const _ = require("lodash");
-const debug = require("debug")("get-source-plugins-as-remark-plugins");
+const visit = require(`unist-util-visit`)
+const _ = require(`lodash`)
+const debug = require(`debug`)(`get-source-plugins-as-remark-plugins`)
+const { interopDefault } = require(`./interop-default`)
 
-let fileNodes;
+let fileNodes
 
 // ensure only one `/` in new url
 const withPathPrefix = (url, pathPrefix) =>
-  (pathPrefix + url).replace(/\/\//, `/`);
+  (pathPrefix + url).replace(/\/\//, `/`)
 
 module.exports = async function getSourcePluginsAsRemarkPlugins({
   gatsbyRemarkPlugins,
   mdxNode,
   getNode,
-  getNodes,
+  getNodesByType,
   reporter,
   cache,
-  pathPrefix
+  pathPrefix,
+  ...helpers
 }) {
-  debug("getSourcePluginsAsRemarkPlugins");
-  let pathPlugin = undefined;
+  debug(`getSourcePluginsAsRemarkPlugins`)
+  let pathPlugin = undefined
   if (pathPrefix) {
     pathPlugin = () =>
       async function transformer(markdownAST) {
@@ -30,28 +32,28 @@ module.exports = async function getSourcePluginsAsRemarkPlugins({
             !node.url.startsWith(`//`)
           ) {
             // TODO: where does withPathPrefix
-            node.url = withPathPrefix(node.url, pathPrefix);
+            node.url = withPathPrefix(node.url, pathPrefix)
           }
-        });
-        return markdownAST;
-      };
+        })
+        return markdownAST
+      }
   }
 
-  fileNodes = getNodes().filter(n => n.internal.type === `File`);
+  fileNodes = getNodesByType(`File`)
 
   // return list of remarkPlugins
   const userPlugins = gatsbyRemarkPlugins
     .filter(plugin => {
-      if (_.isFunction(require(plugin.resolve))) {
-        return true;
+      if (_.isFunction(interopDefault(require(plugin.resolve)))) {
+        return true
       } else {
-        debug("userPlugins: filtering out", plugin);
-        return false;
+        debug(`userPlugins: filtering out`, plugin)
+        return false
       }
     })
     .map(plugin => {
-      debug("userPlugins: constructing remark plugin for ", plugin);
-      const requiredPlugin = require(plugin.resolve);
+      debug(`userPlugins: constructing remark plugin for `, plugin)
+      const requiredPlugin = interopDefault(require(plugin.resolve))
       const wrappedPlugin = () =>
         async function transformer(markdownAST) {
           await requiredPlugin(
@@ -62,20 +64,21 @@ module.exports = async function getSourcePluginsAsRemarkPlugins({
               files: fileNodes,
               pathPrefix,
               reporter,
-              cache
+              cache,
+              ...helpers,
             },
             plugin.options || {}
-          );
+          )
 
-          return markdownAST;
-        };
+          return markdownAST
+        }
 
-      return [wrappedPlugin, {}];
-    });
+      return [wrappedPlugin, {}]
+    })
 
   if (pathPlugin) {
-    return [pathPlugin, ...userPlugins];
+    return [pathPlugin, ...userPlugins]
   } else {
-    return [...userPlugins];
+    return [...userPlugins]
   }
-};
+}

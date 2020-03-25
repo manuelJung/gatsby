@@ -1,13 +1,12 @@
-const _ = require(`lodash`)
 const path = require(`path`)
 const slug = require(`slug`)
-const slash = require(`slash`)
+const { slash } = require(`gatsby-core-utils`)
 
 // Implement the Gatsby API “createPages”. This is
 // called after the Gatsby bootstrap is finished so you have
 // access to any information necessary to programmatically
 // create pages.
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // The “graphql” function allows us to run arbitrary
@@ -35,7 +34,8 @@ exports.createPages = async ({ graphql, actions }) => {
   )
 
   if (result.errors) {
-    throw new Error(result.errors)
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
   }
 
   // Create image post pages.
@@ -44,7 +44,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Instagram post. Since the scraped Instagram data
   // already includes an ID field, we just use that for
   // each page's path.
-  _.each(result.data.allPostsJson.edges, edge => {
+  result.data.allPostsJson.edges.forEach(edge => {
     // Gatsby uses Redux to manage its internal state.
     // Plugins and sites can use functions like "createPage"
     // to interact with Gatsby.

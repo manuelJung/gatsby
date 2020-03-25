@@ -4,8 +4,7 @@ date: 2019-06-18
 author: Dustin Schau
 excerpt: "We're dropping support for Node 6 in minor releases of core Gatsby packages. Learn more about why this decision was made."
 tags:
-  - core
-  - deprecation
+  - releases
 ---
 
 Effective in Gatsby v2.10.0, we are making a potentially breaking change and dropping support for Node 6. We don't take this decision lightly, and realize that there is _potential_ for breaking applications by not following [semantic versioning][semver] _strictly_ and releasing a new major version of Gatsby (v3.0.0).
@@ -90,7 +89,7 @@ We are very much cognizant that this change may introduce some measure of churn 
 
 [semver]: https://semver.org/
 [rfc]: https://github.com/gatsbyjs/rfcs/pull/24
-[node-8-docs]: /tutorial/part-zero/#-install-nodejs-and-npm
+[node-8-docs]: /tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system
 [vw-test-suite]: https://github.com/auchenberg/volkswagen
 [babel-preset-gatsby-package]: https://github.com/gatsbyjs/gatsby/tree/master/packages/babel-preset-gatsby-package
 [babel-preset-env]: https://babeljs.io/docs/en/babel-preset-env#targetsnode

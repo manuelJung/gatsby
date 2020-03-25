@@ -53,6 +53,7 @@ async function fetch({
   _concurrentRequests,
   _includedRoutes,
   _excludedRoutes,
+  _restApiRoutePrefix,
   typePrefix,
   refactoredEntityTypes,
 }) {
@@ -65,7 +66,7 @@ async function fetch({
     url = `https://public-api.wordpress.com/wp/v2/sites/${baseUrl}`
     _accessToken = await getWPCOMAccessToken(_auth)
   } else {
-    url = `${_siteURL}/wp-json`
+    url = `${_siteURL}/${_restApiRoutePrefix}`
     if (shouldUseJwt(_auth)) {
       _accessToken = await getJWToken(_auth, url)
     }
@@ -285,7 +286,7 @@ async function fetchData({
 
   let entities = []
   if (routeResponse) {
-    if (type.indexOf(`wordpress__menus_menus`) !== -1) {
+    if (type.includes(`wordpress__menus_menus`)) {
       routeResponse = routeResponse.map(r => {
         return { ...r, ID: r.term_id }
       })
@@ -690,7 +691,7 @@ const useApiUrl = (apiUrl, endpointURL) => {
 
 /**
  * Build full URL from baseUrl and fullPath.
- * Method of constructing full URL depends on wether it's hosted on wordpress.com
+ * Method of constructing full URL depends on whether it's hosted on wordpress.com
  * or not as wordpress.com have slightly different (custom) REST structure
  *
  * @param {any} baseUrl The base site URL that should be prepended to full path

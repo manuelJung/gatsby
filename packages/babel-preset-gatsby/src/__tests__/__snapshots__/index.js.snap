@@ -9,12 +9,18 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-macros/dist/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-runtime/lib/index.js",
       Object {
-        "absoluteRuntimePath": "<PROJECT_ROOT>/packages/babel-preset-gatsby/node_modules/@babel/runtime",
+        "absoluteRuntimePath": "<PROJECT_ROOT>/node_modules/@babel/runtime",
         "corejs": false,
         "helpers": false,
         "regenerator": true,
@@ -66,12 +72,18 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-macros/dist/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-runtime/lib/index.js",
       Object {
-        "absoluteRuntimePath": "<PROJECT_ROOT>/packages/babel-preset-gatsby/node_modules/@babel/runtime",
+        "absoluteRuntimePath": "<PROJECT_ROOT>/node_modules/@babel/runtime",
         "corejs": false,
         "helpers": false,
         "regenerator": true,
@@ -127,12 +139,18 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-macros/dist/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-runtime/lib/index.js",
       Object {
-        "absoluteRuntimePath": "<PROJECT_ROOT>/packages/babel-preset-gatsby/node_modules/@babel/runtime",
+        "absoluteRuntimePath": "<PROJECT_ROOT>/node_modules/@babel/runtime",
         "corejs": false,
         "helpers": false,
         "regenerator": true,
@@ -182,12 +200,18 @@ Object {
         "loose": true,
       },
     ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+    ],
+    Array [
+      "<PROJECT_ROOT>/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+    ],
     "<PROJECT_ROOT>/node_modules/babel-plugin-macros/dist/index.js",
     "<PROJECT_ROOT>/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
     Array [
       "<PROJECT_ROOT>/node_modules/@babel/plugin-transform-runtime/lib/index.js",
       Object {
-        "absoluteRuntimePath": "<PROJECT_ROOT>/packages/babel-preset-gatsby/node_modules/@babel/runtime",
+        "absoluteRuntimePath": "<PROJECT_ROOT>/node_modules/@babel/runtime",
         "corejs": false,
         "helpers": true,
         "regenerator": true,

@@ -6,6 +6,7 @@ excerpt: "Build a full-featured Gatsby website one time, and apply it to multipl
 tags:
   - themes
   - mdx
+  - developer-experience
 ---
 
 Gatsby is a great tool for building static websites, and offers a lot of value when building pages based on a set of Markdown files. This makes it an ideal partner for building documentation websites, which are typically built statically, and updated by writing Markdown.
@@ -48,7 +49,7 @@ Using [MDX](/docs/mdx/), we’re able to write rich documentation by including R
 
 ![Enhanced code blocks](./images/code-blocks.gif)
 
-Lastly, MDX introduces the concept of composing pages from shared chunks of content. For example, we may want to document some commonly used steps to set up an Apollo project. Instead of copying and pasting that content into multiple pages, we can write it once as [an MDX file](https://github.com/apollographql/gatsby-theme-apollo/blob/master/packages/gatsby-theme-apollo-docs/mdx/project-config-panel.mdx), import it into other MDX files, and [render it like a React component](https://www.apollographql.com/docs/platform/schema-validation/#set-up-schema-validation). What’s more? Since we’re working with MDX, we can use interactive React elements within the shared content!
+Lastly, MDX introduces the concept of composing pages from shared chunks of content. For example, we may want to document some commonly used steps to set up an Apollo project. Instead of copying and pasting that content into multiple pages, we can write it once as [an MDX file](https://github.com/apollographql/gatsby-theme-apollo/blob/master/packages/gatsby-theme-apollo-docs/shared/project-config-panel.mdx), import it into other MDX files, and [render it like a React component](https://www.apollographql.com/docs/platform/schema-validation/#set-up-schema-validation). What’s more? Since we’re working with MDX, we can use interactive React elements within the shared content!
 
 ![Creating shared content in MDX](./images/shared-content.png)
 

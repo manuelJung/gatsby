@@ -138,6 +138,9 @@ exports.onCreateNode = true
  * for programmatically manipulating pages created by other plugins e.g.
  * if you want paths without trailing slashes.
  *
+ * There is a mechanism in Gatsby to prevent calling onCreatePage for pages
+ * created by the same gatsby-node.js to avoid infinite loops/callback.
+ *
  * See the guide [Creating and Modifying Pages](/docs/creating-and-modifying-pages/)
  * for more on this API.
  */
@@ -209,6 +212,7 @@ exports.setFieldsOnGraphQLNodeType = true
  * generated schema, e.g. to customize added third-party types, use the
  * [`createResolvers`](/docs/node-apis/#createResolvers) API.
  *
+ * @gatsbyVersion 2.12.0
  * @param {object} $0
  * @param {object} $0.actions
  * @param {object} $0.actions.createTypes
@@ -278,11 +282,14 @@ exports.createSchemaCustomization = true
  *
  * For fuller examples, see [`using-type-definitions`](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-type-definitions).
  *
+ * @gatsbyVersion 2.2.0
  * @param {object} $0
  * @param {GraphQLSchema} $0.intermediateSchema Current GraphQL schema
  * @param {function} $0.createResolvers Add custom resolvers to GraphQL field configs
  * @param {object} $1
- * @param {object} $1.resolvers Resolvers from plugin options in `gatsby-config.js`.
+ * @param {object} $1.resolvers An object map of GraphQL type names to custom resolver functions.
+ * @param {object} $1.options Optional createResolvers options.
+ * @param {object} $1.options.ignoreNonexistentTypes Silences the warning when trying to add resolvers for types that don't exist. Useful for optional extensions.
  * @example
  * exports.createResolvers = ({ createResolvers }) => {
  *   const resolvers = {

@@ -6,7 +6,7 @@ image: "ui-and-code.png"
 draft: true
 ---
 
-Imagine for a moment the perfect website framework. One that produced really
+Imagine for a moment the perfect website framework. One that produces really
 fast sites by default, that let you use the latest web tools and browser
 features without complicated setup, and that helped your team stay coordinated
 as you develop, ship, and maintain sites.
@@ -57,9 +57,9 @@ including blogs, marketing sites, documentation sites, and e-commerce.
 It wraps three of the most popular web app tools into a cohesive website
 framework:
 
-- [React](https://facebook.github.io/react/) from Facebook for building UIs
+- [React](https://reactjs.org/) from Facebook for building UIs
 - [Webpack](https://webpack.js.org/) for bundling JavaScript and CSS
-- [GraphQL](http://graphql.org/) from Facebook for declarative data queries
+- [GraphQL](https://graphql.org/) from Facebook for declarative data queries
 
 While designing Gatsby, I wanted a synthesis of two of my favorite developer
 experiences. The simplicity of building sites with markdown and static site

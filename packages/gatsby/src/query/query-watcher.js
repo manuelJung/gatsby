@@ -12,7 +12,7 @@ const _ = require(`lodash`)
 const chokidar = require(`chokidar`)
 
 const path = require(`path`)
-const slash = require(`slash`)
+const { slash } = require(`gatsby-core-utils`)
 
 const { store, emitter } = require(`../redux/`)
 const { boundActionCreators } = require(`../redux/actions`)
@@ -20,7 +20,7 @@ const queryCompiler = require(`./query-compiler`).default
 const report = require(`gatsby-cli/lib/reporter`)
 const queryUtil = require(`./index`)
 const debug = require(`debug`)(`gatsby:query-watcher`)
-const getGatsbyDependents = require(`../utils/gatsby-dependents`)
+import { getGatsbyDependents } from "../utils/gatsby-dependents"
 
 const getQueriesSnapshot = () => {
   const state = store.getState()
@@ -70,7 +70,7 @@ const handleQuery = (
     if (
       isNewQuery ||
       oldQuery.hash !== query.hash ||
-      oldQuery.text !== query.text
+      oldQuery.query !== query.text
     ) {
       boundActionCreators.replaceStaticQuery({
         name: query.name,
@@ -95,9 +95,9 @@ const handleQuery = (
   return false
 }
 
-const updateStateAndRunQueries = isFirstRun => {
+const updateStateAndRunQueries = (isFirstRun, { parentSpan } = {}) => {
   const snapshot = getQueriesSnapshot()
-  return queryCompiler().then(queries => {
+  return queryCompiler({ parentSpan }).then(queries => {
     // If there's an error while extracting queries, the queryCompiler returns false
     // or zero results.
     // Yeah, should probably be an error but don't feel like threading the error
@@ -146,7 +146,7 @@ const updateStateAndRunQueries = isFirstRun => {
 
         If you're more experienced with GraphQL, you can also export GraphQL
         fragments from components and compose the fragments in the Page component
-        query and pass data down into the child component — http://graphql.org/learn/queries/#fragments
+        query and pass data down into the child component — https://graphql.org/learn/queries/#fragments
 
       `)
     }
@@ -172,9 +172,7 @@ const clearInactiveComponents = () => {
   components.forEach(component => {
     if (!activeTemplates.has(component.componentPath)) {
       debug(
-        `${
-          component.componentPath
-        } component was removed because it isn't used by any page`
+        `${component.componentPath} component was removed because it isn't used by any page`
       )
       store.dispatch({
         type: `REMOVE_TEMPLATE_COMPONENT`,
@@ -184,14 +182,14 @@ const clearInactiveComponents = () => {
   })
 }
 
-exports.extractQueries = () => {
+exports.extractQueries = ({ parentSpan } = {}) => {
   // Remove template components that point to not existing page templates.
   // We need to do this, because components data is cached and there might
   // be changes applied when development server isn't running. This is needed
   // only in initial run, because during development state will be adjusted.
   clearInactiveComponents()
 
-  return updateStateAndRunQueries(true).then(() => {
+  return updateStateAndRunQueries(true, { parentSpan }).then(() => {
     // During development start watching files to recompile & run
     // queries on the fly.
     if (process.env.NODE_ENV !== `production`) {
@@ -239,6 +237,7 @@ const watch = async rootDir => {
       ...packagePaths,
     ])
     .on(`change`, path => {
+      report.pendingActivity({ id: `query-extraction` })
       debounceCompile()
     })
 
@@ -266,3 +265,5 @@ exports.startWatchDeletePage = () => {
     }
   })
 }
+
+exports.updateStateAndRunQueries = updateStateAndRunQueries

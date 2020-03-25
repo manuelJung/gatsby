@@ -2,9 +2,7 @@
 title: Managing Pull Requests
 ---
 
-## Introduction
-
-If you'd like to help out managing PRs on the gatsby repo on GitHub, this document is for you. We'll go over conventions we prefer, what we like to check for on various types of pull requests, permissions and guidelines on how to leave feedback.
+If you'd like to help out managing PRs on the Gatsby repo on GitHub, this document is for you. We'll go over conventions the team prefers, what we check for on various types of pull requests, permissions, and guidelines on how to leave feedback.
 
 We have over 2,000 contributors and so much of what makes Gatsby great is contributed by folks like you.
 
@@ -12,24 +10,7 @@ Needless to say, we get a lot of PRs and we've been merging over a [100 contribu
 
 Let's talk a little about how we manage pull requests in the Gatsby repo.
 
-## What is a Pull Request?
-
-In case you aren't familiar, here is how the fine folks at GitHub [define a pull request](https://help.github.com/en/articles/about-pull-requests):
-
-> Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
-
-Gatsby uses the pull request process to review and test changes before they’re added to Gatsby’s GitHub repository. Anyone can open a pull request. The same process is used for all contributors, whether this is your first open source contribution or you’re a core member of the Gatsby team.
-
-Simply put, when someone wants to contribute to Gatsby, they open a request to _pull_ their code into ours. Depending on the type of change, we like to categorize pull requests (or PRs for short) into:
-
-- Documentation
-- Code
-- Starters or Site Showcase
-- Blog posts
-
-When looking at a PR for the first time, it can help to read up on linked issues or [RFCs](/contributing/rfc-process/) (if there are any) to gain context on what the PR intends to add or fix.
-
-> 💡 We typically recommend [opening an issue](/contributing/how-to-file-an-issue/) before a PR if there isn't already an issue for the problem you'd like to solve. This helps facilitate a discussion before deciding on an implementation.
+For an introduction on what Pull Requests are and how to file one, check out the contributing doc on [How to Open a Pull Request](/contributing/how-to-open-a-pull-request).
 
 ## Verifying a Pull Request
 
@@ -39,7 +20,11 @@ Some general things to verify in a pull request are:
 
 - Links ought to be relative instead of absolute when linking to docs (`/docs/some-reference/` instead of `https://www.gatsbyjs.org/docs/some-reference/`)
 - Language ought to be inclusive and accessible
-- Issues and RFCs (if any) that this PR addresses ought to be linked to
+- Issues and Requests for Comments (RFCs) (if any) that this PR addresses ought to be linked to
+
+> 💡 When looking at a PR for the first time, it can help to read up on linked issues or [RFCs](/contributing/rfc-process/) (if there are any) to gain context on what the PR intends to add or fix.
+
+Note for Gatsby Core or Learning team members: if a PR has merge conflicts or needs a little help to push it across the finish line, contributing directly to a fork or branch can be a great way to resolve it. See notes on [pushing to a remote fork in Git](#pushing-changes-to-a-remote-fork).
 
 ### Type Specific Guidelines
 
@@ -55,6 +40,8 @@ We typically look for the following in [PRs that add documentation](/contributin
 - Style — whether the written language follows our [style guide](/contributing/gatsby-style-guide/)
 - Headings – whether the heading levels in a doc start with h2 (`##` in Markdown) and grow in order, establishing an accessible content hierarchy
 - Type & Format – whether docs and learning materials align with our recommendations and [docs templates](/contributing/docs-templates/)
+
+If a PR includes code examples, tutorials, recipes, or actionable guides, the reviewer must test out the material to ensure accuracy. **No PRs should be approved or merged that haven't been vetted for errors or omissions.**
 
 #### Code
 
@@ -78,10 +65,11 @@ For PRs that add a site or a starter to the showcase, we ought to check:
 
 For PRs that add a blog post, we ought to check:
 
+- Approval – has the [blog post been approved](/contributing/blog-contributions/) by marketing or another Gatsby internal team?
 - Correctness — whether the added documentation is technically correct
 - Style — whether the written language follows our [style guide](/contributing/gatsby-style-guide/)
 - Subject matter — blog posts should not be purely promotional, spammy, or inappropriate. An author should check with a member of the Gatsby team that their post is appropriate for the blog before creating their PR.
-- Time Sensitivity — blog posts are more time dependent than docs, especially since they get buried after more posts are published. If something is continually relevant and more of a general how-to, it should probably go in the [Reference Guides](/docs/guides/) section of the docs.
+- Time Sensitivity — blog posts are more time dependent than docs, especially since they get buried after more posts are published. If something is continually relevant and more of a general how-to, it should go in the [Reference Guides](/docs/guides/) or [Tutorials](/tutorial/) section of the docs.
 
 ## Automated Checks
 
@@ -97,7 +85,7 @@ We lint all code and documentation for consistency. You might find that your PR 
 
 If this is your PR and you have the code checked out on your machine, you can run:
 
-```bash
+```shell
 npm run format
 ```
 
@@ -113,7 +101,7 @@ In situations like this, testing the change locally can be very valuable.
 
 > 💡 In case this is the first time you're doing this, you might have to [set up your development environment](/contributing/setting-up-your-local-dev-environment).
 
-Testing out unpublished packages locally can be tricky. We have just the tool to make that easy for you.
+Testing out unpublished packages locally can be tricky. We have just the tool to make that easy.
 
 Say hello to your new best friend, `gatsby-dev-cli`.
 
@@ -157,22 +145,34 @@ These are bad PR titles because they are generic, don't communicate the change p
 - Be objective and limit nitpicks (a few are fine if they add value or improve code readability)
 - Don't suggest and expect changes out of scope which are best addressed in a separate PR
 
+## Pushing changes to a remote fork
+
+Sometimes the easiest way to unblock a stalled PR is to sort out merge conflicts or apply remaining suggestions. When the GitHub UI won't cut it, you can (often) apply changes directly to someone's remote fork with Git:
+
+- Add their Gatsby fork as a remote:<br />`git remote add <forkname> git@github.com:<username>/gatsby.git`
+- Fetch the branches:<br />`git fetch <forkname>`
+- Check out their branch locally:<br />`git checkout -b <branch-name> <forkname>/<branch-name>`
+- Make your changes, add some commits
+- Push branch to the remote fork (also see [Gotchas](#gotchas) below):<br /> `git push <forkname> head:<branch-name>`
+
+Alternatively, you can manage forks and branches with [hub](https://github.com/github/hub).
+
 ## Rights and Permissions
 
 ### Who can review a PR?
 
-If you're a member of the [gatsbyjs](http://github.com/gatsbyjs) organization on GitHub, you can review a PR.
+If you're a member of the [gatsbyjs](https://github.com/gatsbyjs) organization on GitHub, you can review **most** PRs. PRs with [`topic: internal`](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+label%3A%22topic%3A+internal%22) are reserved for Core and Learning team members as they are typically part of an internal project or hiring process.
 
 > 💡 Not a member yet? Want to [get involved in contributing](/contributing/how-to-contribute/) to open source projects? Make your first contribution and you'll be invited automatically!
 
 ### Who can approve a PR?
 
-Every PR opened in the repository needs to be approved before it can be merged. While anyone who is a member of the [gatsbyjs](http://github.com/gatsbyjs) organization can approve a PR, to be merged in, it needs to be reviewed by a member of the team that owns that part of Gatsby.
+Every PR opened in the repository needs to be approved before it can be merged. While anyone who is a member of the [gatsbyjs](https://github.com/gatsbyjs) organization can approve a PR, to be merged in, it needs to be reviewed by a member of the team that owns that part of Gatsby.
 
 Typically this is:
 
 - **gatsbyjs/core** for Code
-- **gatsbyjs/docs** for Documentation
+- **gatsbyjs/learning** for Documentation
 
 We also have `CODEOWNERS` set on different parts of the repo and an approval by someone in the `CODEOWNERS` for the file(s) the PR is changing can also suffice.
 

@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 import sharp from "./safe-sharp"
-import { createContentDigest, cpuCoreCount } from "gatsby-core-utils"
+import { createContentDigest, cpuCoreCount, slash } from "gatsby-core-utils"
 import { defaultIcons, doesIconExist, addDigestToPath } from "./common"
 
 sharp.simd(true)
@@ -57,13 +57,18 @@ async function checkCache(cache, icon, srcIcon, srcIconDigest, callback) {
   }
 }
 
-exports.onPostBootstrap = async ({ reporter }, { localize, ...manifest }) => {
-  const activity = reporter.activityTimer(`Build manifest and related icons`)
+exports.onPostBootstrap = async (
+  { reporter, parentSpan, basePath },
+  { localize, ...manifest }
+) => {
+  const activity = reporter.activityTimer(`Build manifest and related icons`, {
+    parentSpan,
+  })
   activity.start()
 
   let cache = new Map()
 
-  await makeManifest(cache, reporter, manifest)
+  await makeManifest({ cache, reporter, pluginOptions: manifest, basePath })
 
   if (Array.isArray(localize)) {
     const locales = [...localize]
@@ -79,10 +84,16 @@ exports.onPostBootstrap = async ({ reporter }, { localize, ...manifest }) => {
           cacheModeOverride = { cache_busting_mode: `name` }
         }
 
-        return makeManifest(cache, reporter, {
-          ...manifest,
-          ...locale,
-          ...cacheModeOverride,
+        return makeManifest({
+          cache,
+          reporter,
+          pluginOptions: {
+            ...manifest,
+            ...locale,
+            ...cacheModeOverride,
+          },
+          shouldLocalize: true,
+          basePath,
         })
       })
     )
@@ -90,9 +101,30 @@ exports.onPostBootstrap = async ({ reporter }, { localize, ...manifest }) => {
   activity.end()
 }
 
-const makeManifest = async (cache, reporter, pluginOptions) => {
+/**
+ * The complete Triforce, or one or more components of the Triforce.
+ * @typedef {Object} makeManifestArgs
+ * @property {Object} cache - from gatsby-node api
+ * @property {Object} reporter - from gatsby-node api
+ * @property {Object} pluginOptions - from gatsby-node api/gatsby config
+ * @property {boolean?} shouldLocalize
+ * @property {string?} basePath - string of base path frpvided by gatsby node
+ */
+
+/**
+ * Build manifest
+ * @param {makeManifestArgs}
+ */
+const makeManifest = async ({
+  cache,
+  reporter,
+  pluginOptions,
+  shouldLocalize = false,
+  basePath = ``,
+}) => {
   const { icon, ...manifest } = pluginOptions
-  const suffix = pluginOptions.lang ? `_${pluginOptions.lang}` : ``
+  const suffix =
+    shouldLocalize && pluginOptions.lang ? `_${pluginOptions.lang}` : ``
 
   // Delete options we won't pass to the manifest.webmanifest.
   delete manifest.plugins
@@ -136,7 +168,9 @@ const makeManifest = async (cache, reporter, pluginOptions) => {
   if (icon !== undefined) {
     // Check if the icon exists
     if (!doesIconExist(icon)) {
-      throw `icon (${icon}) does not exist as defined in gatsby-config.js. Make sure the file exists relative to the root of the site.`
+      throw new Error(
+        `icon (${icon}) does not exist as defined in gatsby-config.js. Make sure the file exists relative to the root of the site.`
+      )
     }
 
     const sharpIcon = sharp(icon)
@@ -185,9 +219,32 @@ const makeManifest = async (cache, reporter, pluginOptions) => {
     }
   }
 
+  //Fix #18497 by prefixing paths
+  manifest.icons = manifest.icons.map(icon => {
+    return {
+      ...icon,
+      src: slash(path.join(basePath, icon.src)),
+    }
+  })
+
+  if (manifest.start_url) {
+    manifest.start_url = path.posix.join(basePath, manifest.start_url)
+  }
+
   //Write manifest
   fs.writeFileSync(
     path.join(`public`, `manifest${suffix}.webmanifest`),
     JSON.stringify(manifest)
   )
+}
+
+exports.onCreateWebpackConfig = ({ actions, plugins }, pluginOptions) => {
+  actions.setWebpackConfig({
+    plugins: [
+      plugins.define({
+        __MANIFEST_PLUGIN_HAS_LOCALISATION__:
+          pluginOptions.localize && pluginOptions.localize.length,
+      }),
+    ],
+  })
 }

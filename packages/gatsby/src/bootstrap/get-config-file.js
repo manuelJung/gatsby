@@ -1,7 +1,7 @@
 /* @flow */
 const levenshtein = require(`fast-levenshtein`)
 const fs = require(`fs-extra`)
-const testRequireError = require(`../utils/test-require-error`).default
+import { testRequireError } from "../utils/test-require-error"
 const report = require(`gatsby-cli/lib/reporter`)
 const path = require(`path`)
 const existsSync = require(`fs-exists-cached`).sync
@@ -21,8 +21,10 @@ module.exports = async function getConfigFile(
 ) {
   const configPath = path.join(rootDir, configName)
   let configModule
+  let configFilePath
   try {
-    configModule = require(configPath)
+    configFilePath = require.resolve(configPath)
+    configModule = require(configFilePath)
   } catch (err) {
     const nearMatch = await fs.readdir(rootDir).then(files =>
       files.find(file => {
@@ -58,5 +60,5 @@ module.exports = async function getConfigFile(
     }
   }
 
-  return configModule
+  return { configModule, configFilePath }
 }

@@ -9,6 +9,7 @@ const nodeFromData = (datum, createNodeId) => {
     id: createNodeId(datum.id),
     drupal_id: datum.id,
     parent: null,
+    drupal_parent_menu_item: attributes.parent,
     children: [],
     ...attributes,
     ...preservedId,
@@ -28,7 +29,7 @@ const isFileNode = node =>
 exports.isFileNode = isFileNode
 
 exports.downloadFile = async (
-  { node, store, cache, createNode, createNodeId },
+  { node, store, cache, createNode, createNodeId, getCache, reporter },
   { basicAuth, baseUrl }
 ) => {
   // handle file downloads
@@ -56,8 +57,10 @@ exports.downloadFile = async (
         cache,
         createNode,
         createNodeId,
+        getCache,
         parentNodeId: node.id,
         auth,
+        reporter,
       })
     } catch (e) {
       // Ignore

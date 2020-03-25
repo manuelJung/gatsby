@@ -4,6 +4,7 @@ const axios = require(`axios`)
 const _ = require(`lodash`)
 const Promise = require(`bluebird`)
 const cheerio = require(`cheerio`)
+const chalk = require(`chalk`)
 const { buildResponsiveSizes } = require(`./utils`)
 
 // If the image is hosted on contentful
@@ -34,6 +35,7 @@ module.exports = async (
     showCaptions: false,
     pathPrefix,
     withWebp: false,
+    loading: `lazy`,
   }
 
   // This will only work for markdown syntax image tags
@@ -61,18 +63,27 @@ module.exports = async (
     const optionsHash = createContentDigest(options)
 
     const cacheKey = `remark-images-ctf-${fileName}-${optionsHash}`
-    let cahedRawHTML = await cache.get(cacheKey)
+    let cachedRawHTML = await cache.get(cacheKey)
 
-    if (cahedRawHTML) {
-      return cahedRawHTML
+    if (cachedRawHTML) {
+      return cachedRawHTML
     }
     const metaReader = sharp()
 
-    const response = await axios({
-      method: `GET`,
-      url: originalImg, // for some reason there is a './' prefix
-      responseType: `stream`,
-    })
+    let response
+    try {
+      response = await axios({
+        method: `GET`,
+        url: originalImg, // for some reason there is a './' prefix
+        responseType: `stream`,
+      })
+    } catch (err) {
+      reporter.panic(
+        `Image downloading failed for ${originalImg}, please check if the image still exists on contentful`,
+        err
+      )
+      return []
+    }
 
     response.data.pipe(metaReader)
 
@@ -97,6 +108,18 @@ module.exports = async (
     const fileNameNoExt = fileName.replace(/\.[^/.]+$/, ``)
     const defaultAlt = fileNameNoExt.replace(/[^A-Z0-9]/gi, ` `)
 
+    const loading = options.loading
+
+    if (![`lazy`, `eager`, `auto`].includes(loading)) {
+      reporter.warn(
+        reporter.stripIndent(`
+        ${chalk.bold(loading)} is an invalid value for the ${chalk.bold(
+          `loading`
+        )} option. Please pass one of "lazy", "eager" or "auto".
+      `)
+      )
+    }
+
     // Create our base image tag
     let imageTag = `
       <img
@@ -109,6 +132,7 @@ module.exports = async (
         src="${fallbackSrc}"
         srcset="${srcSet}"
         sizes="${responsiveSizesResult.sizes}"
+        loading="${loading}"
       />
    `.trim()
 
@@ -133,6 +157,7 @@ module.exports = async (
             alt="${node.alt ? node.alt : defaultAlt}"
             title="${node.title ? node.title : ``}"
             src="${fallbackSrc}"
+            loading="${loading}"
           />
         </picture>
       `.trim()
@@ -142,15 +167,11 @@ module.exports = async (
     let rawHTML = `
       <span
         class="gatsby-resp-image-wrapper"
-        style="position: relative; display: block; ${
-          options.wrapperStyle
-        }; max-width: ${presentationWidth}px; margin-left: auto; margin-right: auto;"
+        style="position: relative; display: block; ${options.wrapperStyle}; max-width: ${presentationWidth}px; margin-left: auto; margin-right: auto;"
       >
         <span
           class="gatsby-resp-image-background-image"
-          style="padding-bottom: ${ratio}; position: relative; bottom: 0; left: 0; background-image: url('${
-      responsiveSizesResult.base64
-    }'); background-size: cover; display: block;"
+          style="padding-bottom: ${ratio}; position: relative; bottom: 0; left: 0; background-image: url('${responsiveSizesResult.base64}'); background-size: cover; display: block;"
         >
           ${imageTag}
         </span>
