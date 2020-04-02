@@ -11,3 +11,13 @@ export const generateComponentChunkName = (componentPath: string): string => {
   const name = path.relative(directory, componentPath)
   return `component---${kebabCase(name)}`
 }
+
+export const generateWidgetChunkName = (widgetPath: string): string => {
+  const program = store.getState().program
+  let directory = `/`
+  if (program && program.directory) {
+    directory = program.directory
+  }
+  const name = path.relative(directory, widgetPath)
+  return `widget---${kebabCase(name)}`
+}

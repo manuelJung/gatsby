@@ -15,7 +15,10 @@ const sanitizeNode = require(`../../db/sanitize-node`)
 const { store } = require(`..`)
 const fileExistsSync = require(`fs-exists-cached`).sync
 const joiSchemas = require(`../../joi-schemas/joi`)
-const { generateComponentChunkName } = require(`../../utils/js-chunk-names`)
+const {
+  generateComponentChunkName,
+  generateWidgetChunkName,
+} = require(`../../utils/js-chunk-names`)
 const {
   getCommonDir,
   truncatePath,
@@ -1467,6 +1470,21 @@ actions.removePageData = (id: PageDataRemove) => {
   return {
     type: `REMOVE_PAGE_DATA`,
     payload: id,
+  }
+}
+
+actions.addModuleToPageDependencies = (payload: {
+  path: string,
+  module: string,
+  identifier: string,
+}) => {
+  payload.path = truncatePath(payload.path)
+  return {
+    type: `ADD_MODULE_TO_PAGE_DEPENDENCIES`,
+    payload: {
+      ...payload,
+      chunkName: generateWidgetChunkName(payload.module),
+    },
   }
 }
 

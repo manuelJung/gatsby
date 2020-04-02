@@ -54,6 +54,25 @@ const getComponents = pages =>
     .uniqBy(c => c.componentChunkName)
     .value()
 
+const pickWidgetFields = page => {
+  let fields = []
+  if (page.widgets) {
+    for (let widget of page.widgets) {
+      fields.push({
+        component: widget.module,
+        componentChunkName: widget.chunkName,
+      })
+    }
+  }
+  return fields
+}
+
+const getWidgets = pages =>
+  _(pages)
+    .flatMap(pickWidgetFields)
+    .uniqBy(c => c.componentChunkName)
+    .value()
+
 /**
  * Get all dynamic routes and sort them by most specific at the top
  * code is based on @reach/router match utility (https://github.com/reach/router/blob/152aff2352bc62cefc932e1b536de9efde6b64a5/src/lib/utils.js#L224-L254)
@@ -133,6 +152,7 @@ const writeAll = async state => {
   const pages = [...state.pages.values()]
   const matchPaths = getMatchPaths(pages)
   const components = getComponents(pages)
+  const widgets = getWidgets(pages)
 
   const newHash = createHash(matchPaths, components)
 
@@ -158,7 +178,7 @@ const writeAll = async state => {
 // prefer default export if available
 const preferDefault = m => m && m.default || m
 \n\n`
-  syncRequires += `exports.components = {\n${components
+  syncRequires += `exports.components = {\n${[...components, ...widgets]
     .map(
       c =>
         `  "${
@@ -172,7 +192,7 @@ const preferDefault = m => m && m.default || m
   let asyncRequires = `// prefer default export if available
 const preferDefault = m => m && m.default || m
 \n`
-  asyncRequires += `exports.components = {\n${components
+  asyncRequires += `exports.components = {\n${[...components, ...widgets]
     .map(c => {
       // we need a relative import path to keep contenthash the same if directory changes
       const relativeComponentPath = path.relative(

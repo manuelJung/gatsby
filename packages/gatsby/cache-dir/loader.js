@@ -114,7 +114,7 @@ const doesConnectionSupportPrefetch = () => {
   return true
 }
 
-const toPageResources = (pageData, component = null) => {
+const toPageResources = (pageData, component = null, widgets = null) => {
   const page = {
     componentChunkName: pageData.componentChunkName,
     path: pageData.path,
@@ -126,6 +126,7 @@ const toPageResources = (pageData, component = null) => {
     component,
     json: pageData.result,
     page,
+    widgets,
   }
 }
 
@@ -145,6 +146,7 @@ export class BaseLoader {
     //   }
     // }
     this.pageDb = new Map()
+    this.widgetDb = new Map()
     this.inFlightDb = new Map()
     this.pageDataDb = new Map()
     this.prefetchTriggered = new Set()
@@ -168,6 +170,25 @@ export class BaseLoader {
       this.pageDataDb.set(pagePath, pageData)
 
       return pageData
+    })
+  }
+
+  loadWidgets(widgetChunkNames) {
+    if (!widgetChunkNames) {
+      return Promise.resolve(null)
+    }
+    const names = Object.keys(widgetChunkNames)
+    return Promise.all(
+      names.map(name => {
+        if (this.widgetDb.has(name)) return this.widgetDb.get(name)
+        else return this.loadComponent(widgetChunkNames[name])
+      })
+    ).then(components => {
+      let widgets = {}
+      for (let i = 0; i < names.length; i++) {
+        widgets[names[i]] = components[i]
+      }
+      return widgets
     })
   }
 
@@ -199,8 +220,11 @@ export class BaseLoader {
         }
 
         let pageData = result.payload
-        const { componentChunkName } = pageData
-        return this.loadComponent(componentChunkName).then(component => {
+        const { componentChunkName, widgetChunkNames } = pageData
+        return Promise.all([
+          this.loadComponent(componentChunkName),
+          this.loadWidgets(widgetChunkNames),
+        ]).then(([component, widgets]) => {
           const finalResult = { createdAt: new Date() }
           let pageResources
           if (!component) {
@@ -215,7 +239,7 @@ export class BaseLoader {
                 ? allData[0].webpackCompilationHash
                 : ``,
             })
-            pageResources = toPageResources(pageData, component)
+            pageResources = toPageResources(pageData, component, widgets)
             finalResult.payload = pageResources
             emitter.emit(`onPostLoadPageResources`, {
               page: pageResources,
@@ -388,7 +412,18 @@ export class ProdLoader extends BaseLoader {
         }
         const pageData = result.payload
         const chunkName = pageData.componentChunkName
-        const componentUrls = createComponentUrls(chunkName)
+        let componentUrls = createComponentUrls(chunkName)
+
+        if (pageData.widgetChunkNames) {
+          const widgetsToPreload = Object.keys(
+            pageData.widgetChunkNames
+          ).filter(name => !this.widgetDb.has(name))
+          const widgetUrls = widgetsToPreload.map(widgetName =>
+            createComponentUrls(pageData.widgetChunkNames[widgetName])
+          )
+          componentUrls = [].concat(componentUrls, ...widgetUrls)
+        }
+
         return Promise.all(componentUrls.map(prefetchHelper)).then(
           () => pageData
         )

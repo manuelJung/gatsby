@@ -11,6 +11,10 @@ class PageRenderer extends React.Component {
       pathContext: this.props.pageContext,
     }
 
+    if (this.props.pageResources.widgets) {
+      props.widgets = this.props.pageResources.widgets
+    }
+
     const [replacementElement] = apiRunner(`replaceComponentRenderer`, {
       props: this.props,
       loader: publicLoader,

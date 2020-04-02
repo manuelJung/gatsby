@@ -26,6 +26,14 @@ const write = async ({ publicDir }, page, result) => {
     matchPath: page.matchPath,
     result,
   }
+
+  if (page.widgets) {
+    body.widgetChunkNames = page.widgets.reduce((dict, widget) => {
+      dict[widget.identifier] = widget.chunkName
+      return dict
+    }, {})
+  }
+
   const bodyStr = JSON.stringify(body)
   // transform asset size to kB (from bytes) to fit 64 bit to numbers
   const pageDataSize = Buffer.byteLength(bodyStr) / 1000

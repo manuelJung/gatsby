@@ -91,6 +91,7 @@ module.exports = async (graphqlRunner, queryJob: QueryJob) => {
     delete result.pageContext.componentPath
     delete result.pageContext.context
     delete result.pageContext.isCreatedByStatefulCreatePages
+    delete result.pageContext.widgets
   }
 
   const resultJSON = JSON.stringify(result)
