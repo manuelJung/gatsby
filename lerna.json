@@ -4,7 +4,7 @@
       "license": "MIT"
     },
     "publish": {
-      "allowBranch": "master",
+      "allowBranch": "topics/code-splitting",
       "bump": "patch",
       "conventionalCommits": true,
       "message": "chore(release): Publish"
