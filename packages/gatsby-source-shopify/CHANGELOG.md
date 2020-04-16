@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.3-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-shopify@2.1.8...gatsby-source-shopify@3.1.3-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-source-shopify:** allShopifyPage node creation issue [#18249](https://github.com/gatsbyjs/gatsby/issues/18249) fix ([#19950](https://github.com/gatsbyjs/gatsby/issues/19950)) ([94bc770](https://github.com/gatsbyjs/gatsby/commit/94bc770))
+- update dependency chalk to ^2.4.2 ([#16830](https://github.com/gatsbyjs/gatsby/issues/16830)) ([3c89607](https://github.com/gatsbyjs/gatsby/commit/3c89607))
+- update dependency graphql-request to ^1.8.2 ([#16886](https://github.com/gatsbyjs/gatsby/issues/16886)) ([1e6c29a](https://github.com/gatsbyjs/gatsby/commit/1e6c29a))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-source-shopify:** Add compareAtPrice to presentment prices ([#20144](https://github.com/gatsbyjs/gatsby/issues/20144)) ([5ea9af7](https://github.com/gatsbyjs/gatsby/commit/5ea9af7))
+- **gatsby-source-shopify:** add metafields to each product variant node ([#20066](https://github.com/gatsbyjs/gatsby/issues/20066)) ([5150e15](https://github.com/gatsbyjs/gatsby/commit/5150e15))
+- **gatsby-source-shopify:** add metafields to product nodes ([#16312](https://github.com/gatsbyjs/gatsby/issues/16312)) ([271bad2](https://github.com/gatsbyjs/gatsby/commit/271bad2))
+- **gatsby-source-shopify:** add SEO field to articles ([#18985](https://github.com/gatsbyjs/gatsby/issues/18985)) ([4178edd](https://github.com/gatsbyjs/gatsby/commit/4178edd))
+- **gatsby-source-shopify:** Add support for custom domains ([#20204](https://github.com/gatsbyjs/gatsby/issues/20204)) ([11fe33f](https://github.com/gatsbyjs/gatsby/commit/11fe33f))
+- **gatsby-source-shopify:** Filter fetched collections ([#15046](https://github.com/gatsbyjs/gatsby/issues/15046)) ([ce1bf9c](https://github.com/gatsbyjs/gatsby/commit/ce1bf9c))
+- **gatsby-source-shopify:** support multi currency ([#19454](https://github.com/gatsbyjs/gatsby/issues/19454)) ([ab3ea88](https://github.com/gatsbyjs/gatsby/commit/ab3ea88))
+
 ## [3.1.2](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-shopify@3.1.1...gatsby-source-shopify@3.1.2) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-source-shopify

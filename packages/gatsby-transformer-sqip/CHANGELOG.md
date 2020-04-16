@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.4-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-sqip@2.1.11...gatsby-transformer-sqip@2.2.4-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-transformer-sqip:** properly check for correct input… ([#21401](https://github.com/gatsbyjs/gatsby/issues/21401)) ([ef8d53d](https://github.com/gatsbyjs/gatsby/commit/ef8d53d))
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update dependency debug to ^3.2.6 ([#16859](https://github.com/gatsbyjs/gatsby/issues/16859)) ([697f76b](https://github.com/gatsbyjs/gatsby/commit/697f76b))
+- update dependency fs-extra to ^4.0.3 ([#16876](https://github.com/gatsbyjs/gatsby/issues/16876)) ([2cc762d](https://github.com/gatsbyjs/gatsby/commit/2cc762d))
+- update dependency fs-extra to v8 ([#17031](https://github.com/gatsbyjs/gatsby/issues/17031)) ([d891a19](https://github.com/gatsbyjs/gatsby/commit/d891a19))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **gatsby-transformer-sqip:** Return null early for unsupported file types ([#16602](https://github.com/gatsbyjs/gatsby/issues/16602)) ([c6e353d](https://github.com/gatsbyjs/gatsby/commit/c6e353d))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+
 ## [2.2.3](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-sqip@2.2.2...gatsby-transformer-sqip@2.2.3) (2020-03-24)
 
 **Note:** Version bump only for package gatsby-transformer-sqip

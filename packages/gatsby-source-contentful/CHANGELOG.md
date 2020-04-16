@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.6-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-contentful@2.1.15...gatsby-source-contentful@2.2.6-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-plugin-contentful:** wait for contentTypes to be created) ([#22307](https://github.com/gatsbyjs/gatsby/issues/22307)) ([75b041e](https://github.com/gatsbyjs/gatsby/commit/75b041e))
+- update dependency axios to ^0.19.2 ([#22317](https://github.com/gatsbyjs/gatsby/issues/22317)) ([91e780f](https://github.com/gatsbyjs/gatsby/commit/91e780f))
+- **gatsby-source-contentful:** Add contentful_id field recursi… ([#20258](https://github.com/gatsbyjs/gatsby/issues/20258)) ([deb41cd](https://github.com/gatsbyjs/gatsby/commit/deb41cd))
+- **gatsby-source-contentful:** Add panic messaging to builds with no locales ([#21667](https://github.com/gatsbyjs/gatsby/issues/21667)) ([6979816](https://github.com/gatsbyjs/gatsby/commit/6979816))
+- **gatsby-source-contentful:** Allow proxy to be passed in to… ([#17574](https://github.com/gatsbyjs/gatsby/issues/17574)) ([744c07d](https://github.com/gatsbyjs/gatsby/commit/744c07d))
+- **gatsby-source-contentful:** Don’t crash when GATSBY_CONTENTFUL_OFFLINE and downloadLocal are used ([#21472](https://github.com/gatsbyjs/gatsby/issues/21472)) ([02471fc](https://github.com/gatsbyjs/gatsby/commit/02471fc)), closes [#21463](https://github.com/gatsbyjs/gatsby/issues/21463)
+- **gatsby-source-contentful:** fix crash when downloading asset with a file that doesn't have a url ([#19218](https://github.com/gatsbyjs/gatsby/issues/19218)) ([0b57a3c](https://github.com/gatsbyjs/gatsby/commit/0b57a3c))
+- **gatsby-source-contentful:** Fixing when assets are in draft state ([#17571](https://github.com/gatsbyjs/gatsby/issues/17571)) ([7e40c1e](https://github.com/gatsbyjs/gatsby/commit/7e40c1e))
+- **gatsby-source-contentful:** LongText fields require markdown transformer ([#20398](https://github.com/gatsbyjs/gatsby/issues/20398)) ([1ad7bbb](https://github.com/gatsbyjs/gatsby/commit/1ad7bbb)), closes [/github.com/gatsbyjs/gatsby/issues/3205#issuecomment-351603320](https://github.com//github.com/gatsbyjs/gatsby/issues/3205/issues/issuecomment-351603320)
+- **gatsby-source-contentful:** Prevent TypeError if many-to-on… ([#17500](https://github.com/gatsbyjs/gatsby/issues/17500)) ([fde5de6](https://github.com/gatsbyjs/gatsby/commit/fde5de6))
+- **gatsby-source-contentful:** prevent unpublished Contentful entries from breaking content sync ([#21765](https://github.com/gatsbyjs/gatsby/issues/21765)) ([11274db](https://github.com/gatsbyjs/gatsby/commit/11274db))
+- **readme:** Update Readme gatsby-source-contentful missing co… ([#22339](https://github.com/gatsbyjs/gatsby/issues/22339)) ([ab59162](https://github.com/gatsbyjs/gatsby/commit/ab59162))
+- check that richTextOptions exists before using it ([#21648](https://github.com/gatsbyjs/gatsby/issues/21648)) ([80acb8d](https://github.com/gatsbyjs/gatsby/commit/80acb8d))
+- fix Contentful sync limit ([#21644](https://github.com/gatsbyjs/gatsby/issues/21644)) ([af921bb](https://github.com/gatsbyjs/gatsby/commit/af921bb))
+- **gatsby-source-contentful:** Remove whitespace from default long text value ([#21412](https://github.com/gatsbyjs/gatsby/issues/21412)) ([bed3684](https://github.com/gatsbyjs/gatsby/commit/bed3684))
+- **gatsby-transformer-sharp:** define required image fields as non-null in schema ([#20314](https://github.com/gatsbyjs/gatsby/issues/20314)) ([e3026c9](https://github.com/gatsbyjs/gatsby/commit/e3026c9))
+- update dependency @hapi/joi to ^15.1.1 ([#16796](https://github.com/gatsbyjs/gatsby/issues/16796)) ([2cfc19c](https://github.com/gatsbyjs/gatsby/commit/2cfc19c))
+- update dependency base64-img to ^1.0.4 ([#16813](https://github.com/gatsbyjs/gatsby/issues/16813)) ([ea39f67](https://github.com/gatsbyjs/gatsby/commit/ea39f67))
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update dependency chalk to ^2.4.2 ([#16830](https://github.com/gatsbyjs/gatsby/issues/16830)) ([3c89607](https://github.com/gatsbyjs/gatsby/commit/3c89607))
+- update dependency contentful to ^6.1.3 ([#16838](https://github.com/gatsbyjs/gatsby/issues/16838)) ([53f67a7](https://github.com/gatsbyjs/gatsby/commit/53f67a7))
+- update dependency fs-extra to ^4.0.3 ([#16876](https://github.com/gatsbyjs/gatsby/issues/16876)) ([2cc762d](https://github.com/gatsbyjs/gatsby/commit/2cc762d))
+- update dependency is-online to v8 ([#17037](https://github.com/gatsbyjs/gatsby/issues/17037)) ([fef7a8c](https://github.com/gatsbyjs/gatsby/commit/fef7a8c))
+- update dependency qs to ^6.9.0 ([#17802](https://github.com/gatsbyjs/gatsby/issues/17802)) ([8119d4b](https://github.com/gatsbyjs/gatsby/commit/8119d4b))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- **gatsby-source-contentful:** Take space id into account during node creation ([#17923](https://github.com/gatsbyjs/gatsby/issues/17923)) ([fdd57d3](https://github.com/gatsbyjs/gatsby/commit/fdd57d3))
+- update dependency fs-extra to v8 ([#17031](https://github.com/gatsbyjs/gatsby/issues/17031)) ([d891a19](https://github.com/gatsbyjs/gatsby/commit/d891a19))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- add an option to resolve locales in entries referenced by rich text ([#21619](https://github.com/gatsbyjs/gatsby/issues/21619)) ([0666df7](https://github.com/gatsbyjs/gatsby/commit/0666df7))
+- **gatsby-source-contentful:** Add option to use Content Type ID for GraphQL schema generation ([#20265](https://github.com/gatsbyjs/gatsby/issues/20265)) ([0e71cfb](https://github.com/gatsbyjs/gatsby/commit/0e71cfb))
+- **gatsby-source-contentful:** Add page limit to gatsby-source-contentful ([#21030](https://github.com/gatsbyjs/gatsby/issues/21030)) ([8f11c7d](https://github.com/gatsbyjs/gatsby/commit/8f11c7d))
+- **gatsby-source-contentful:** handle SELF_SIGNED_CERT_IN_CHAIN error. ([#19161](https://github.com/gatsbyjs/gatsby/issues/19161)) ([62dd3d1](https://github.com/gatsbyjs/gatsby/commit/62dd3d1))
+
+### Performance Improvements
+
+- **gatsby-source-contentful:** Add cache for remote thumnails ([#22551](https://github.com/gatsbyjs/gatsby/issues/22551)) ([7abf4d7](https://github.com/gatsbyjs/gatsby/commit/7abf4d7))
+- **gatsby-source-contentful:** remove recursion in fixIds ([#20837](https://github.com/gatsbyjs/gatsby/issues/20837)) ([996e951](https://github.com/gatsbyjs/gatsby/commit/996e951))
+
 ## [2.2.5](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-contentful@2.2.4...gatsby-source-contentful@2.2.5) (2020-03-26)
 
 ### Performance Improvements

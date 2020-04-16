@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-netlify@2.1.3...gatsby-plugin-netlify@2.2.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-plugin-netlify:** add page-data & app-data to preload list ([#21552](https://github.com/gatsbyjs/gatsby/issues/21552)) ([bf3fabd](https://github.com/gatsbyjs/gatsby/commit/bf3fabd))
+- **gatsby-plugin-netlify:** add warning instead for invalid he… ([#18326](https://github.com/gatsbyjs/gatsby/issues/18326)) ([24ccbfd](https://github.com/gatsbyjs/gatsby/commit/24ccbfd))
+- **gatsby-plugin-netlify:** cast `status` to string ([#18726](https://github.com/gatsbyjs/gatsby/issues/18726)) ([3c8623c](https://github.com/gatsbyjs/gatsby/commit/3c8623c))
+- **gatsby-plugin-netlify:** don't add `/undefined` in generated `_headers` file ([#18925](https://github.com/gatsbyjs/gatsby/issues/18925)) ([d83a5a2](https://github.com/gatsbyjs/gatsby/commit/d83a5a2))
+- **gatsby-plugin-netlify:** fix merging of path headers ([#18203](https://github.com/gatsbyjs/gatsby/issues/18203)) ([5cbb741](https://github.com/gatsbyjs/gatsby/commit/5cbb741))
+- **gatsby-plugin-netlify:** security headers merging ([#17538](https://github.com/gatsbyjs/gatsby/issues/17538)) ([8420626](https://github.com/gatsbyjs/gatsby/commit/8420626))
+- update dependency fs-extra to ^4.0.3 ([#16876](https://github.com/gatsbyjs/gatsby/issues/16876)) ([2cc762d](https://github.com/gatsbyjs/gatsby/commit/2cc762d))
+- update dependency fs-extra to v8 ([#17031](https://github.com/gatsbyjs/gatsby/issues/17031)) ([d891a19](https://github.com/gatsbyjs/gatsby/commit/d891a19))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+
 ## [2.2.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-netlify@2.2.0...gatsby-plugin-netlify@2.2.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-plugin-netlify

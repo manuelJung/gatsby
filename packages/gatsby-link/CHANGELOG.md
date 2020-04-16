@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-link@2.2.2...gatsby-link@2.3.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-link:** Adds Type, PropType, tests, and docs for `st… ([#20807](https://github.com/gatsbyjs/gatsby/issues/20807)) ([d8937d0](https://github.com/gatsbyjs/gatsby/commit/d8937d0))
+- update dependency @types/reach\_\_router to ^1.2.4 ([#16798](https://github.com/gatsbyjs/gatsby/issues/16798)) ([11b3f11](https://github.com/gatsbyjs/gatsby/commit/11b3f11))
+- update dependency @types/reach\_\_router to ^1.2.6 ([#18405](https://github.com/gatsbyjs/gatsby/issues/18405)) ([6c37aa3](https://github.com/gatsbyjs/gatsby/commit/6c37aa3))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- update minor updates in packages except react, babel and eslint ([#17716](https://github.com/gatsbyjs/gatsby/issues/17716)) ([af39ae3](https://github.com/gatsbyjs/gatsby/commit/af39ae3))
+- **docs:** change relative url to absolute url for gatsby-link readme ([#16197](https://github.com/gatsbyjs/gatsby/issues/16197)) ([3eb43db](https://github.com/gatsbyjs/gatsby/commit/3eb43db))
+
 ## [2.3.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-link@2.3.0...gatsby-link@2.3.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-link

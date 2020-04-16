@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-image@2.2.6...gatsby-image@2.3.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-image:** add itemprop on placeholder images ([#18035](https://github.com/gatsbyjs/gatsby/issues/18035)) ([aa8b2fb](https://github.com/gatsbyjs/gatsby/commit/aa8b2fb)), closes [#17419](https://github.com/gatsbyjs/gatsby/issues/17419)
+- **gatsby-image:** add matchMedia to fix wrong aspect ratio and dimensions in art-directed image arrays ([#19887](https://github.com/gatsbyjs/gatsby/issues/19887)) ([b3c000b](https://github.com/gatsbyjs/gatsby/commit/b3c000b))
+- **gatsby-image:** Added aria-hidden attribute to layout elements ([#20593](https://github.com/gatsbyjs/gatsby/issues/20593)) ([3666917](https://github.com/gatsbyjs/gatsby/commit/3666917))
+- **gatsby-image:** check if imageRef is still available ([#22255](https://github.com/gatsbyjs/gatsby/issues/22255)) ([363279a](https://github.com/gatsbyjs/gatsby/commit/363279a))
+- **gatsby-image:** Fix eager loading ([#16746](https://github.com/gatsbyjs/gatsby/issues/16746)) ([9040f69](https://github.com/gatsbyjs/gatsby/commit/9040f69))
+- **gatsby-image:** Fix loading="eager" & critical ([#17148](https://github.com/gatsbyjs/gatsby/issues/17148)) ([43536e0](https://github.com/gatsbyjs/gatsby/commit/43536e0))
+- **gatsby-image:** Remove onClick prop ([#19458](https://github.com/gatsbyjs/gatsby/issues/19458)) ([0da6dbb](https://github.com/gatsbyjs/gatsby/commit/0da6dbb))
+- **gatsby-image:** When art-directing images, default the padding aspect ratio to first image without a media query when no media query matches ([#21431](https://github.com/gatsbyjs/gatsby/issues/21431)) ([df7e93d](https://github.com/gatsbyjs/gatsby/commit/df7e93d))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
 ## [2.3.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-image@2.3.0...gatsby-image@2.3.1) (2020-03-23)
 
 ### Bug Fixes

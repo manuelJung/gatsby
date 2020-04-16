@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.3-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-filesystem@2.1.6...gatsby-source-filesystem@2.2.3-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby:** Handle special characters in windows paths ([#19600](https://github.com/gatsbyjs/gatsby/issues/19600)) ([9929cf0](https://github.com/gatsbyjs/gatsby/commit/9929cf0))
+- **gatsby-source-filesystem:** fix add/change text ([#20188](https://github.com/gatsbyjs/gatsby/issues/20188)) ([0fda1e6](https://github.com/gatsbyjs/gatsby/commit/0fda1e6))
+- **gatsby-source-filesystem:** Retry stalled remote file downloads ([#20843](https://github.com/gatsbyjs/gatsby/issues/20843)) ([536686b](https://github.com/gatsbyjs/gatsby/commit/536686b))
+- update dependency better-queue to ^3.8.10 ([#16824](https://github.com/gatsbyjs/gatsby/issues/16824)) ([6834344](https://github.com/gatsbyjs/gatsby/commit/6834344))
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update dependency chokidar to v2.1.6 ([#16832](https://github.com/gatsbyjs/gatsby/issues/16832)) ([dbcf65f](https://github.com/gatsbyjs/gatsby/commit/dbcf65f))
+- update dependency chokidar to v3 ([#16975](https://github.com/gatsbyjs/gatsby/issues/16975)) ([816d475](https://github.com/gatsbyjs/gatsby/commit/816d475))
+- update dependency chokidar to v3.2.1 ([#18009](https://github.com/gatsbyjs/gatsby/issues/18009)) ([4df0306](https://github.com/gatsbyjs/gatsby/commit/4df0306))
+- update dependency file-type to v12 ([#17030](https://github.com/gatsbyjs/gatsby/issues/17030)) ([f538563](https://github.com/gatsbyjs/gatsby/commit/f538563))
+- update dependency fs-extra to v8 ([#17031](https://github.com/gatsbyjs/gatsby/issues/17031)) ([d891a19](https://github.com/gatsbyjs/gatsby/commit/d891a19))
+- update dependency pretty-bytes to v5 ([#19485](https://github.com/gatsbyjs/gatsby/issues/19485)) ([29735ea](https://github.com/gatsbyjs/gatsby/commit/29735ea))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages ([#19080](https://github.com/gatsbyjs/gatsby/issues/19080)) ([95e908e](https://github.com/gatsbyjs/gatsby/commit/95e908e))
+- **gatsby-source-filesystem:** Queue all operations which happ… ([#17404](https://github.com/gatsbyjs/gatsby/issues/17404)) ([ad74957](https://github.com/gatsbyjs/gatsby/commit/ad74957))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **gatsby-source-filesystem:** Move GraphQL definition for Fil… ([#16041](https://github.com/gatsbyjs/gatsby/issues/16041)) ([36eae6b](https://github.com/gatsbyjs/gatsby/commit/36eae6b))
+- **gatsby-source-filesystem:** Use forward slashes on relative… ([#17048](https://github.com/gatsbyjs/gatsby/issues/17048)) ([799f657](https://github.com/gatsbyjs/gatsby/commit/799f657))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-source-filesystem:** Unify publicURL ([#22328](https://github.com/gatsbyjs/gatsby/issues/22328)) ([756d386](https://github.com/gatsbyjs/gatsby/commit/756d386))
+
 ## [2.2.2](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-filesystem@2.2.1...gatsby-source-filesystem@2.2.2) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-source-filesystem

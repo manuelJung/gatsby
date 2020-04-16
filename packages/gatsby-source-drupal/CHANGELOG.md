@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.3-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-drupal@3.2.8...gatsby-source-drupal@3.4.3-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update dependency axios to ^0.19.2 ([#22317](https://github.com/gatsbyjs/gatsby/issues/22317)) ([91e780f](https://github.com/gatsbyjs/gatsby/commit/91e780f))
+- **gatsby-source-drupal:** add check for empty filenodes ([#16160](https://github.com/gatsbyjs/gatsby/issues/16160)) ([3ebccb5](https://github.com/gatsbyjs/gatsby/commit/3ebccb5)), closes [#15761](https://github.com/gatsbyjs/gatsby/issues/15761)
+- **gatsby-source-drupal:** add error handling for empty body ([#18568](https://github.com/gatsbyjs/gatsby/issues/18568)) ([dc6642f](https://github.com/gatsbyjs/gatsby/commit/dc6642f))
+- **gatsby-source-drupal:** Add safety check for existence of datum. ([#22213](https://github.com/gatsbyjs/gatsby/issues/22213)) ([71b5d1e](https://github.com/gatsbyjs/gatsby/commit/71b5d1e))
+- **gatsby-source-drupal:** allow specifying disallowed link types ([#19930](https://github.com/gatsbyjs/gatsby/issues/19930)) ([238b9fc](https://github.com/gatsbyjs/gatsby/commit/238b9fc))
+- **gatsby-source-drupal:** don't show "file download" activity if there are no files to download ([#16157](https://github.com/gatsbyjs/gatsby/issues/16157)) ([a488588](https://github.com/gatsbyjs/gatsby/commit/a488588))
+- **gatsby-source-drupal:** preserve drupal parent as drupal_pa… ([#15075](https://github.com/gatsbyjs/gatsby/issues/15075)) ([8e5fc2f](https://github.com/gatsbyjs/gatsby/commit/8e5fc2f))
+- **gatsby-source-drupal:** sanity check before accessing field ([#19867](https://github.com/gatsbyjs/gatsby/issues/19867)) ([8a2aeb3](https://github.com/gatsbyjs/gatsby/commit/8a2aeb3))
+- **gatsby-source-drupal:** skip jsonapi_schema endpoint ([#19879](https://github.com/gatsbyjs/gatsby/issues/19879)) ([61a0280](https://github.com/gatsbyjs/gatsby/commit/61a0280)), closes [#19867](https://github.com/gatsbyjs/gatsby/issues/19867)
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-source-drupal:** Add Drupal JSON:API Includes support ([#21380](https://github.com/gatsbyjs/gatsby/issues/21380)) ([ba3502e](https://github.com/gatsbyjs/gatsby/commit/ba3502e))
+- **gatsby-source-drupal:** secrets and delete functionality ([#18345](https://github.com/gatsbyjs/gatsby/issues/18345)) ([c1734b6](https://github.com/gatsbyjs/gatsby/commit/c1734b6))
+
 ## [3.4.2](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-drupal@3.4.1...gatsby-source-drupal@3.4.2) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-source-drupal

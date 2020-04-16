@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.3-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-google-analytics@2.1.4...gatsby-plugin-google-analytics@2.2.3-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-plugin-google-analytics:** Don't create tracking cod… ([#19592](https://github.com/gatsbyjs/gatsby/issues/19592)) ([e883487](https://github.com/gatsbyjs/gatsby/commit/e883487))
+- **gatsby-plugin-google-analytics:** Fix broken script ([#16223](https://github.com/gatsbyjs/gatsby/issues/16223)) ([4ff5321](https://github.com/gatsbyjs/gatsby/commit/4ff5321))
+- **gatsby-plugin-google-analytics:** Update typings ([#19684](https://github.com/gatsbyjs/gatsby/issues/19684)) ([524862a](https://github.com/gatsbyjs/gatsby/commit/524862a))
+- **gatsby-plugin-google-analytics:** Value typing ([#20554](https://github.com/gatsbyjs/gatsby/issues/20554)) ([b6031bb](https://github.com/gatsbyjs/gatsby/commit/b6031bb))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-plugin-google-analytics:** add custom event helper ([#17612](https://github.com/gatsbyjs/gatsby/issues/17612)) ([4e431f3](https://github.com/gatsbyjs/gatsby/commit/4e431f3))
+- **gatsby-plugin-google-analytics:** better dnt ([#17067](https://github.com/gatsbyjs/gatsby/issues/17067)) ([4fdf0d1](https://github.com/gatsbyjs/gatsby/commit/4fdf0d1))
+- **gatsby-plugin-google-analytics:** enable more options. ([#15280](https://github.com/gatsbyjs/gatsby/issues/15280)) ([b3ed9be](https://github.com/gatsbyjs/gatsby/commit/b3ed9be))
+
 ## [2.2.2](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-google-analytics@2.2.1...gatsby-plugin-google-analytics@2.2.2) (2020-03-25)
 
 **Note:** Version bump only for package gatsby-plugin-google-analytics

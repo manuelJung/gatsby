@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-csv@2.1.2...gatsby-transformer-csv@2.2.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-transformer-csv:** add tsv parsing option ([#21198](https://github.com/gatsbyjs/gatsby/issues/21198)) ([fef77ba](https://github.com/gatsbyjs/gatsby/commit/fef77ba))
+- **gatsby-transformer-csv:** support customizing node type names ([#18104](https://github.com/gatsbyjs/gatsby/issues/18104)) ([fc3572a](https://github.com/gatsbyjs/gatsby/commit/fc3572a))
+
 ## [2.2.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-csv@2.2.0...gatsby-transformer-csv@2.2.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-transformer-csv

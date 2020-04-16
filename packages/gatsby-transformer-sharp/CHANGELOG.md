@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.4-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-sharp@2.2.4...gatsby-transformer-sharp@2.4.4-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-transformer-sharp:** Add `checkSupportedExtensions`… ([#22565](https://github.com/gatsbyjs/gatsby/issues/22565)) ([91e7bfb](https://github.com/gatsbyjs/gatsby/commit/91e7bfb))
+- **gatsby-transformer-sharp:** define required image fields as non-null in schema ([#20314](https://github.com/gatsbyjs/gatsby/issues/20314)) ([e3026c9](https://github.com/gatsbyjs/gatsby/commit/e3026c9))
+- **gatsby-transformer-sharp:** explicitly register enum types ([#19343](https://github.com/gatsbyjs/gatsby/issues/19343)) ([fdc7ccd](https://github.com/gatsbyjs/gatsby/commit/fdc7ccd))
+- **gatsby-transformer-sharp:** prevent duplicate copy of the same file ([#20620](https://github.com/gatsbyjs/gatsby/issues/20620)) ([93f0645](https://github.com/gatsbyjs/gatsby/commit/93f0645))
+- **gatsby-transformer-sharp:** Warn when using unsupported ext… ([#20782](https://github.com/gatsbyjs/gatsby/issues/20782)) ([4519c05](https://github.com/gatsbyjs/gatsby/commit/4519c05))
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update dependency fs-extra to ^7.0.1 ([#16878](https://github.com/gatsbyjs/gatsby/issues/16878)) ([f008fed](https://github.com/gatsbyjs/gatsby/commit/f008fed))
+- update dependency fs-extra to v8 ([#17031](https://github.com/gatsbyjs/gatsby/issues/17031)) ([d891a19](https://github.com/gatsbyjs/gatsby/commit/d891a19))
+- update dependency sharp to ^0.23.1 ([#17904](https://github.com/gatsbyjs/gatsby/issues/17904)) ([f19ad3c](https://github.com/gatsbyjs/gatsby/commit/f19ad3c))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages ([#19087](https://github.com/gatsbyjs/gatsby/issues/19087)) ([294a48f](https://github.com/gatsbyjs/gatsby/commit/294a48f))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **docs:** add note for exception when using gatsby-source-con… ([#15926](https://github.com/gatsbyjs/gatsby/issues/15926)) ([810174d](https://github.com/gatsbyjs/gatsby/commit/810174d))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-transformer-sharp:** add inside and outside fit opt… ([#14852](https://github.com/gatsbyjs/gatsby/issues/14852)) ([1aa2974](https://github.com/gatsbyjs/gatsby/commit/1aa2974)), closes [#13078](https://github.com/gatsbyjs/gatsby/issues/13078) [/github.com/gatsbyjs/gatsby/pull/13078#issuecomment-482247808](https://github.com//github.com/gatsbyjs/gatsby/pull/13078/issues/issuecomment-482247808)
+- **gatsby-transformer-sharp:** ImageSharp as child of File type([#16109](https://github.com/gatsbyjs/gatsby/issues/16109)) ([272d22f](https://github.com/gatsbyjs/gatsby/commit/272d22f))
+
 ## [2.4.3](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-sharp@2.4.2...gatsby-transformer-sharp@2.4.3) (2020-03-27)
 
 ### Bug Fixes

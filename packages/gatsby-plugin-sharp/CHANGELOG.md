@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.4-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-sharp@2.2.9...gatsby-plugin-sharp@2.5.4-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **#19220:** added default args for generateBase64 function ([#20158](https://github.com/gatsbyjs/gatsby/issues/20158)) ([d6c2b73](https://github.com/gatsbyjs/gatsby/commit/d6c2b73)), closes [#19220](https://github.com/gatsbyjs/gatsby/issues/19220)
+- **docs:** dead links to sharp documentation, need to point to new host ([#16687](https://github.com/gatsbyjs/gatsby/issues/16687)) ([7c096e7](https://github.com/gatsbyjs/gatsby/commit/7c096e7))
+- **docs:** remove double words ([#22494](https://github.com/gatsbyjs/gatsby/issues/22494)) ([75f6ee2](https://github.com/gatsbyjs/gatsby/commit/75f6ee2))
+- **gatsby:** Fix tracing so that everything happens under one span ([#16893](https://github.com/gatsbyjs/gatsby/issues/16893)) ([f8cae16](https://github.com/gatsbyjs/gatsby/commit/f8cae16))
+- **gatsby-core-utils:** make createContentDigest deterministic ([#19832](https://github.com/gatsbyjs/gatsby/issues/19832)) ([cb6d0e2](https://github.com/gatsbyjs/gatsby/commit/cb6d0e2))
+- **gatsby-plugin-sharp:** add output file cache back for non job api ([#20905](https://github.com/gatsbyjs/gatsby/issues/20905)) ([64a5399](https://github.com/gatsbyjs/gatsby/commit/64a5399))
+- **gatsby-plugin-sharp:** Allow brackets in paths ([#18289](https://github.com/gatsbyjs/gatsby/issues/18289)) ([f9933b1](https://github.com/gatsbyjs/gatsby/commit/f9933b1))
+- **gatsby-plugin-sharp:** Apply transformArgs on compressJpg a… ([#22538](https://github.com/gatsbyjs/gatsby/issues/22538)) ([4fd158f](https://github.com/gatsbyjs/gatsby/commit/4fd158f))
+- **gatsby-plugin-sharp:** convert "overlayWith" to "composite" ([#17392](https://github.com/gatsbyjs/gatsby/issues/17392)) ([49913ba](https://github.com/gatsbyjs/gatsby/commit/49913ba)), closes [#17162](https://github.com/gatsbyjs/gatsby/issues/17162)
+- **gatsby-plugin-sharp:** convert rotate boolean to int ([#20894](https://github.com/gatsbyjs/gatsby/issues/20894)) ([a8135ea](https://github.com/gatsbyjs/gatsby/commit/a8135ea))
+- **gatsby-plugin-sharp:** fix "Cannot set property 'multipassCount' of undefined" error ([#19131](https://github.com/gatsbyjs/gatsby/issues/19131)) ([3766dcd](https://github.com/gatsbyjs/gatsby/commit/3766dcd))
+- **gatsby-plugin-sharp:** fix progressbar & caching layer ([#19717](https://github.com/gatsbyjs/gatsby/issues/19717)) ([7f9d5bb](https://github.com/gatsbyjs/gatsby/commit/7f9d5bb))
+- **gatsby-plugin-sharp:** fix Traced SVG scaling issue in Internet Explorer ([#22358](https://github.com/gatsbyjs/gatsby/issues/22358)) ([6d4fa76](https://github.com/gatsbyjs/gatsby/commit/6d4fa76))
+- **gatsby-plugin-sharp:** honor `stripMetadata` setting for webp output images ([#20860](https://github.com/gatsbyjs/gatsby/issues/20860)) ([b1e328a](https://github.com/gatsbyjs/gatsby/commit/b1e328a))
+- **gatsby-plugin-sharp:** hot fix for "Generating image thumbnails" progress bar reporting duplicates that don't do actual processing ([#20839](https://github.com/gatsbyjs/gatsby/issues/20839)) ([db36d69](https://github.com/gatsbyjs/gatsby/commit/db36d69))
+- **gatsby-plugin-sharp:** throw error when not added to gatsby-config ([#21045](https://github.com/gatsbyjs/gatsby/issues/21045)) ([3487e48](https://github.com/gatsbyjs/gatsby/commit/3487e48))
+- update dependency async to ^2.6.3 ([#16806](https://github.com/gatsbyjs/gatsby/issues/16806)) ([54e8461](https://github.com/gatsbyjs/gatsby/commit/54e8461))
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update dependency fs-extra to ^7.0.1 ([#16878](https://github.com/gatsbyjs/gatsby/issues/16878)) ([f008fed](https://github.com/gatsbyjs/gatsby/commit/f008fed))
+- update dependency fs-extra to v8 ([#17031](https://github.com/gatsbyjs/gatsby/issues/17031)) ([d891a19](https://github.com/gatsbyjs/gatsby/commit/d891a19))
+- update dependency sharp to ^0.23.1 ([#17904](https://github.com/gatsbyjs/gatsby/issues/17904)) ([f19ad3c](https://github.com/gatsbyjs/gatsby/commit/f19ad3c))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages ([#19087](https://github.com/gatsbyjs/gatsby/issues/19087)) ([294a48f](https://github.com/gatsbyjs/gatsby/commit/294a48f))
+- **gatsby-plugin-sharp:** Set a unique uuid for each job ([#17693](https://github.com/gatsbyjs/gatsby/issues/17693)) ([0926c73](https://github.com/gatsbyjs/gatsby/commit/0926c73))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-plugin-sharp:** move to jobs-api v2 ([#19940](https://github.com/gatsbyjs/gatsby/issues/19940)) ([dbab3f9](https://github.com/gatsbyjs/gatsby/commit/dbab3f9))
+- **gatsby-remark-images:** Add flag to suppress css background-image to prevent FOUB ([#17154](https://github.com/gatsbyjs/gatsby/issues/17154)) ([125fd01](https://github.com/gatsbyjs/gatsby/commit/125fd01))
+- **gatsby-transformer-sharp:** add inside and outside fit opt… ([#14852](https://github.com/gatsbyjs/gatsby/issues/14852)) ([1aa2974](https://github.com/gatsbyjs/gatsby/commit/1aa2974)), closes [#13078](https://github.com/gatsbyjs/gatsby/issues/13078) [/github.com/gatsbyjs/gatsby/pull/13078#issuecomment-482247808](https://github.com//github.com/gatsbyjs/gatsby/pull/13078/issues/issuecomment-482247808)
+
 ## [2.5.3](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-sharp@2.5.2...gatsby-plugin-sharp@2.5.3) (2020-03-24)
 
 ### Bug Fixes

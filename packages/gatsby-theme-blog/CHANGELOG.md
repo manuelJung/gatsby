@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.10-alpha.0 (2020-04-16)
+
+### Bug Fixes
+
+- update dependency gatsby-plugin-theme-ui ([#22318](https://github.com/gatsbyjs/gatsby/issues/22318)) ([b8167de](https://github.com/gatsbyjs/gatsby/commit/b8167de))
+- update dependency theme-ui ([#22324](https://github.com/gatsbyjs/gatsby/issues/22324)) ([05af9d1](https://github.com/gatsbyjs/gatsby/commit/05af9d1))
+- **gatsby-theme-blog:** Dark/light mode switch icon is out of place ([#19813](https://github.com/gatsbyjs/gatsby/issues/19813)) ([4614bce](https://github.com/gatsbyjs/gatsby/commit/4614bce))
+- **gatsby-theme-blog:** fix avatar squishing on mobile ([#19172](https://github.com/gatsbyjs/gatsby/issues/19172)) ([#19236](https://github.com/gatsbyjs/gatsby/issues/19236)) ([77d25da](https://github.com/gatsbyjs/gatsby/commit/77d25da))
+- **gatsby-theme-blog:** fix functions that are interpolated in css ([#20987](https://github.com/gatsbyjs/gatsby/issues/20987)) ([b406c08](https://github.com/gatsbyjs/gatsby/commit/b406c08))
+- **gatsby-theme-blog:** Fix home-footer in Night mode ([#19977](https://github.com/gatsbyjs/gatsby/issues/19977)) ([06e650d](https://github.com/gatsbyjs/gatsby/commit/06e650d))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages ([#19086](https://github.com/gatsbyjs/gatsby/issues/19086)) ([54565f0](https://github.com/gatsbyjs/gatsby/commit/54565f0))
+- update minor updates in packages ([#19087](https://github.com/gatsbyjs/gatsby/issues/19087)) ([294a48f](https://github.com/gatsbyjs/gatsby/commit/294a48f))
+
+### Features
+
+- Change mdx flag into mdxOtherwise to prevent confusion ([#21404](https://github.com/gatsbyjs/gatsby/issues/21404)) ([6874cca](https://github.com/gatsbyjs/gatsby/commit/6874cca))
+
 ## [1.4.9](https://github.com/gatsbyjs/gatsby/compare/gatsby-theme-blog@1.4.8...gatsby-theme-blog@1.4.9) (2020-03-30)
 
 **Note:** Version bump only for package gatsby-theme-blog

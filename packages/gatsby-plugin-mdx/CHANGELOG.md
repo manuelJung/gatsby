@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-mdx@1.0.16...gatsby-plugin-mdx@1.1.5-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **docs:** remove double words ([#22494](https://github.com/gatsbyjs/gatsby/issues/22494)) ([75f6ee2](https://github.com/gatsbyjs/gatsby/commit/75f6ee2))
+- **gatsby:** Handle special characters in windows paths ([#19600](https://github.com/gatsbyjs/gatsby/issues/19600)) ([9929cf0](https://github.com/gatsbyjs/gatsby/commit/9929cf0))
+- **gatsby-plugin-mdx:** display better error message for MDX `html` field in development ([#19111](https://github.com/gatsbyjs/gatsby/issues/19111)) ([ef9efb9](https://github.com/gatsbyjs/gatsby/commit/ef9efb9))
+- **gatsby-plugin-mdx:** don't use jsx ([#18982](https://github.com/gatsbyjs/gatsby/issues/18982)) ([fdeb679](https://github.com/gatsbyjs/gatsby/commit/fdeb679))
+- **gatsby-plugin-mdx:** fix slashes for Windows ([#17290](https://github.com/gatsbyjs/gatsby/issues/17290)) ([31c9cfa](https://github.com/gatsbyjs/gatsby/commit/31c9cfa))
+- **gatsby-plugin-mdx:** make webpack rebuild when new scopes are created ([#22121](https://github.com/gatsbyjs/gatsby/issues/22121)) ([f62001e](https://github.com/gatsbyjs/gatsby/commit/f62001e))
+- **gatsby-plugin-mdx:** Pass node API helpers from onCreateNode and sourceNodes to remark plugins ([#20879](https://github.com/gatsbyjs/gatsby/issues/20879)) ([cd150b5](https://github.com/gatsbyjs/gatsby/commit/cd150b5))
+- **gatsby-plugin-mdx:** Pass node API helpers through mdx-loader to remark plugins ([#21211](https://github.com/gatsbyjs/gatsby/issues/21211)) ([247a183](https://github.com/gatsbyjs/gatsby/commit/247a183))
+- **gatsby-plugin-mdx:** prevent crash when Markdown syntax error([#17135](https://github.com/gatsbyjs/gatsby/issues/17135)) ([ed97891](https://github.com/gatsbyjs/gatsby/commit/ed97891))
+- **gatsby-plugin-mdx:** Use getNodesByType for plugin transformation ([#22555](https://github.com/gatsbyjs/gatsby/issues/22555)) ([63d091a](https://github.com/gatsbyjs/gatsby/commit/63d091a)), closes [#22521](https://github.com/gatsbyjs/gatsby/issues/22521)
+- (gatsby-plugin-mdx)update readme ([#18885](https://github.com/gatsbyjs/gatsby/issues/18885)) ([cedea4a](https://github.com/gatsbyjs/gatsby/commit/cedea4a))
+- update dependency fs-extra to ^7.0.1 ([#16878](https://github.com/gatsbyjs/gatsby/issues/16878)) ([f008fed](https://github.com/gatsbyjs/gatsby/commit/f008fed))
+- update dependency fs-extra to v8 ([#17031](https://github.com/gatsbyjs/gatsby/issues/17031)) ([d891a19](https://github.com/gatsbyjs/gatsby/commit/d891a19))
+- update dependency json5 to ^2.1.1 ([#18066](https://github.com/gatsbyjs/gatsby/issues/18066)) ([43f8707](https://github.com/gatsbyjs/gatsby/commit/43f8707))
+- update dependency slash to v3 ([#17019](https://github.com/gatsbyjs/gatsby/issues/17019)) ([c81f45c](https://github.com/gatsbyjs/gatsby/commit/c81f45c))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages ([#22329](https://github.com/gatsbyjs/gatsby/issues/22329)) ([bfb864b](https://github.com/gatsbyjs/gatsby/commit/bfb864b))
+- **deps:** add missing deps to gatsby-plugin-mdx ([#16207](https://github.com/gatsbyjs/gatsby/issues/16207)) ([2db54b3](https://github.com/gatsbyjs/gatsby/commit/2db54b3))
+- **gatsby-plugin-mdx:** Add missing HTML attribute translations ([#16043](https://github.com/gatsbyjs/gatsby/issues/16043)) ([36e742a](https://github.com/gatsbyjs/gatsby/commit/36e742a))
+- **gatsby-plugin-mdx:** fix filter by heading depth ([#16344](https://github.com/gatsbyjs/gatsby/issues/16344)) ([234863c](https://github.com/gatsbyjs/gatsby/commit/234863c))
+- **gatsby-plugin-mdx:** pass the correct options to setParserP… ([#18243](https://github.com/gatsbyjs/gatsby/issues/18243)) ([8224af5](https://github.com/gatsbyjs/gatsby/commit/8224af5))
+- **gatsby-plugin-mdx:** Raise error if MDXRenderer receives un… ([#16555](https://github.com/gatsbyjs/gatsby/issues/16555)) ([aa03d44](https://github.com/gatsbyjs/gatsby/commit/aa03d44))
+- **gatsby-plugin-mdx:** Replaces to-style with style-to-object ([#16062](https://github.com/gatsbyjs/gatsby/issues/16062)) ([a4947ef](https://github.com/gatsbyjs/gatsby/commit/a4947ef))
+- **gatsby-plugin-mdx:** support yarn PnP ([#20638](https://github.com/gatsbyjs/gatsby/issues/20638)) ([6375ba9](https://github.com/gatsbyjs/gatsby/commit/6375ba9))
+- update minor updates in packages except react, babel and eslint ([#17623](https://github.com/gatsbyjs/gatsby/issues/17623)) ([5bafdff](https://github.com/gatsbyjs/gatsby/commit/5bafdff))
+
+### Features
+
+- **docs:** Clarify gatsby-plugin-mdx requirements for gatsby-source-filesystem ([#15604](https://github.com/gatsbyjs/gatsby/issues/15604)) ([d08323c](https://github.com/gatsbyjs/gatsby/commit/d08323c))
+
 ## [1.1.4](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-mdx@1.1.3...gatsby-plugin-mdx@1.1.4) (2020-03-30)
 
 **Note:** Version bump only for package gatsby-plugin-mdx

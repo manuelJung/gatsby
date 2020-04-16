@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-npm-package-search@2.1.2...gatsby-source-npm-package-search@2.2.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update dependency algoliasearch to ^3.33.0 ([#16804](https://github.com/gatsbyjs/gatsby/issues/16804)) ([0c1f580](https://github.com/gatsbyjs/gatsby/commit/0c1f580))
+- update dependency algoliasearch to ^3.35.0 ([#17910](https://github.com/gatsbyjs/gatsby/issues/17910)) ([436f11d](https://github.com/gatsbyjs/gatsby/commit/436f11d))
+- update dependency algoliasearch to ^3.35.1 ([#18334](https://github.com/gatsbyjs/gatsby/issues/18334)) ([2155c9a](https://github.com/gatsbyjs/gatsby/commit/2155c9a))
+- update dependency got to v8.3.2 ([#16881](https://github.com/gatsbyjs/gatsby/issues/16881)) ([ac583b1](https://github.com/gatsbyjs/gatsby/commit/ac583b1))
+- update minor updates in packages except react, babel and eslint ([#17178](https://github.com/gatsbyjs/gatsby/issues/17178)) ([77dad68](https://github.com/gatsbyjs/gatsby/commit/77dad68))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **www:** fallback to github & unpkg to get README.md ([#16322](https://github.com/gatsbyjs/gatsby/issues/16322)) ([f38b40d](https://github.com/gatsbyjs/gatsby/commit/f38b40d))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+
 ## [2.2.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-npm-package-search@2.2.0...gatsby-source-npm-package-search@2.2.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-source-npm-package-search

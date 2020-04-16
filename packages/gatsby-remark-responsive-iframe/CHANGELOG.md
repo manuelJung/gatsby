@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-remark-responsive-iframe@2.2.4...gatsby-remark-responsive-iframe@2.3.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-remark-responsive-iframe:** content is wrapped in <undefined> block when used with gatsby-plugin-mdx ([#18266](https://github.com/gatsbyjs/gatsby/issues/18266)) ([9c8c1ba](https://github.com/gatsbyjs/gatsby/commit/9c8c1ba))
+- **gatsby-remark-responsive-iframe:** iframe ratio is NaN if d… ([#18328](https://github.com/gatsbyjs/gatsby/issues/18328)) ([257f5d6](https://github.com/gatsbyjs/gatsby/commit/257f5d6))
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update dependency cheerio to ^1.0.0-rc.3 ([#16831](https://github.com/gatsbyjs/gatsby/issues/16831)) ([55bee35](https://github.com/gatsbyjs/gatsby/commit/55bee35))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+
 ## [2.3.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-remark-responsive-iframe@2.3.0...gatsby-remark-responsive-iframe@2.3.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-remark-responsive-iframe

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-react-docgen@4.1.3...gatsby-transformer-react-docgen@5.1.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-transformer-react-docgen:** support schema rebuilding ([#20095](https://github.com/gatsbyjs/gatsby/issues/20095)) ([2c83f09](https://github.com/gatsbyjs/gatsby/commit/2c83f09))
+- update dependency common-tags to ^1.8.0 ([#16834](https://github.com/gatsbyjs/gatsby/issues/16834)) ([8ed5197](https://github.com/gatsbyjs/gatsby/commit/8ed5197))
+- update dependency react-docgen-displayname-handler to ^2.1.2 ([#17069](https://github.com/gatsbyjs/gatsby/issues/17069)) ([c5d5e1a](https://github.com/gatsbyjs/gatsby/commit/c5d5e1a))
+- update dependency react-docgen-displayname-handler to ^2.1.3 ([#17081](https://github.com/gatsbyjs/gatsby/issues/17081)) ([a87cf60](https://github.com/gatsbyjs/gatsby/commit/a87cf60))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-transformer-react-docgen:** fallback to TypeScript… ([#15202](https://github.com/gatsbyjs/gatsby/issues/15202)) ([67c0e3b](https://github.com/gatsbyjs/gatsby/commit/67c0e3b))
+- **gatsby-transformer-react-docgen:** upgrade to react-docgen… ([#16094](https://github.com/gatsbyjs/gatsby/issues/16094)) ([16f7670](https://github.com/gatsbyjs/gatsby/commit/16f7670))
+- **gatsby-transformer-react-docgen:** vendor in react-docge... ([#16913](https://github.com/gatsbyjs/gatsby/issues/16913)) ([f3b540b](https://github.com/gatsbyjs/gatsby/commit/f3b540b))
+
 ## [5.1.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-react-docgen@5.1.0...gatsby-transformer-react-docgen@5.1.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-transformer-react-docgen

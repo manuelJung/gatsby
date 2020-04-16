@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-core-utils@1.0.3...gatsby-core-utils@1.1.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby:** Handle special characters in windows paths ([#19600](https://github.com/gatsbyjs/gatsby/issues/19600)) ([9929cf0](https://github.com/gatsbyjs/gatsby/commit/9929cf0))
+- **gatsby-core-utils:** Add configstore as a dependency ([#22019](https://github.com/gatsbyjs/gatsby/issues/22019)) ([ab71779](https://github.com/gatsbyjs/gatsby/commit/ab71779))
+- **gatsby-core-utils:** make createContentDigest deterministic ([#19832](https://github.com/gatsbyjs/gatsby/issues/19832)) ([cb6d0e2](https://github.com/gatsbyjs/gatsby/commit/cb6d0e2))
+- **gatsby-plugin-mdx:** support yarn PnP ([#20638](https://github.com/gatsbyjs/gatsby/issues/20638)) ([6375ba9](https://github.com/gatsbyjs/gatsby/commit/6375ba9))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **www:** replace \n into newlines for guess ([#16382](https://github.com/gatsbyjs/gatsby/issues/16382)) ([44dbafb](https://github.com/gatsbyjs/gatsby/commit/44dbafb))
+
+### Features
+
+- **gatsby-core-utils:** Add isCI and getCIName ([#19039](https://github.com/gatsbyjs/gatsby/issues/19039)) ([d97bee6](https://github.com/gatsbyjs/gatsby/commit/d97bee6))
+
 ## [1.1.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-core-utils@1.1.0...gatsby-core-utils@1.1.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-core-utils

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.3-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-remark-images-contentful@2.1.4...gatsby-remark-images-contentful@2.2.3-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update dependency axios to ^0.19.2 ([#22317](https://github.com/gatsbyjs/gatsby/issues/22317)) ([91e780f](https://github.com/gatsbyjs/gatsby/commit/91e780f))
+- **gatsby-remark-images-contentful:** make clear error when lo… ([#21756](https://github.com/gatsbyjs/gatsby/issues/21756)) ([99e39a0](https://github.com/gatsbyjs/gatsby/commit/99e39a0))
+- update dependency cheerio to ^1.0.0-rc.3 ([#16831](https://github.com/gatsbyjs/gatsby/issues/16831)) ([55bee35](https://github.com/gatsbyjs/gatsby/commit/55bee35))
+- update dependency is-relative-url to v3 ([#17038](https://github.com/gatsbyjs/gatsby/issues/17038)) ([ff9ae84](https://github.com/gatsbyjs/gatsby/commit/ff9ae84))
+- update dependency sharp to ^0.23.1 ([#17904](https://github.com/gatsbyjs/gatsby/issues/17904)) ([f19ad3c](https://github.com/gatsbyjs/gatsby/commit/f19ad3c))
+- update minor updates in packages ([#19087](https://github.com/gatsbyjs/gatsby/issues/19087)) ([294a48f](https://github.com/gatsbyjs/gatsby/commit/294a48f))
+- **gatsby-remark-images-contentful:** avoid modifying options when passed by reference ([#17880](https://github.com/gatsbyjs/gatsby/issues/17880)) ([23a2bcb](https://github.com/gatsbyjs/gatsby/commit/23a2bcb))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-remark-images-contentful:** add native lazy loading support to contentful images ([#18883](https://github.com/gatsbyjs/gatsby/issues/18883)) ([0fc9534](https://github.com/gatsbyjs/gatsby/commit/0fc9534))
+
 ## [2.2.2](https://github.com/gatsbyjs/gatsby/compare/gatsby-remark-images-contentful@2.2.1...gatsby-remark-images-contentful@2.2.2) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-remark-images-contentful

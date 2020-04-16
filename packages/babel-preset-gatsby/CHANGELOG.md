@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/babel-preset-gatsby@0.2.7...babel-preset-gatsby@0.3.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update dependency babel-plugin-dynamic-import-node to v2 ([#19535](https://github.com/gatsbyjs/gatsby/issues/19535)) ([500ebf6](https://github.com/gatsbyjs/gatsby/commit/500ebf6))
+- update dependency babel-plugin-macros to ^2.6.1 ([#16811](https://github.com/gatsbyjs/gatsby/issues/16811)) ([fc5fb41](https://github.com/gatsbyjs/gatsby/commit/fc5fb41))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **babel-preset-gatsby:** Adds a missing `resolve` call ([#16084](https://github.com/gatsbyjs/gatsby/issues/16084)) ([c37f2be](https://github.com/gatsbyjs/gatsby/commit/c37f2be))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby:** support `?.` and `??` in generated pages ([#20036](https://github.com/gatsbyjs/gatsby/issues/20036)) ([ea6185c](https://github.com/gatsbyjs/gatsby/commit/ea6185c))
+
 ## [0.3.1](https://github.com/gatsbyjs/gatsby/compare/babel-preset-gatsby@0.3.0...babel-preset-gatsby@0.3.1) (2020-03-23)
 
 **Note:** Version bump only for package babel-preset-gatsby

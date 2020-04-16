@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-typography@2.3.2...gatsby-plugin-typography@2.4.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-plugin-typography:** make yarn 2 compatible ([#21978](https://github.com/gatsbyjs/gatsby/issues/21978)) ([b28c27a](https://github.com/gatsbyjs/gatsby/commit/b28c27a))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+
 ## [2.4.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-typography@2.4.0...gatsby-plugin-typography@2.4.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-plugin-typography

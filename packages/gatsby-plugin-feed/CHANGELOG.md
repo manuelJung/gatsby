@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-feed@2.3.5...gatsby-plugin-feed@2.4.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-plugin-feed:** Remove wrong overriding in plugin-feed ([#18793](https://github.com/gatsbyjs/gatsby/issues/18793)) ([ab90296](https://github.com/gatsbyjs/gatsby/commit/ab90296))
+- **gatsby-plugin-feed:** replace title feed requirement with a warning ([#17107](https://github.com/gatsbyjs/gatsby/issues/17107)) ([e26a16b](https://github.com/gatsbyjs/gatsby/commit/e26a16b))
+- update dependency @hapi/joi to ^15.1.1 ([#16796](https://github.com/gatsbyjs/gatsby/issues/16796)) ([2cfc19c](https://github.com/gatsbyjs/gatsby/commit/2cfc19c))
+- update dependency fs-extra to v8 ([#17031](https://github.com/gatsbyjs/gatsby/issues/17031)) ([d891a19](https://github.com/gatsbyjs/gatsby/commit/d891a19))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **gatsby-plugin-feed:** Fixes URL in warning message ([#16148](https://github.com/gatsbyjs/gatsby/issues/16148)) ([8ca2ef8](https://github.com/gatsbyjs/gatsby/commit/8ca2ef8))
+- **gatsby-plugin-feed:** respect custom options and require title in config ([#16814](https://github.com/gatsbyjs/gatsby/issues/16814)) ([92df1cf](https://github.com/gatsbyjs/gatsby/commit/92df1cf))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-plugin-feed:** Allows to override default feed url generation ([#19869](https://github.com/gatsbyjs/gatsby/issues/19869)) ([dd222d5](https://github.com/gatsbyjs/gatsby/commit/dd222d5))
+
 ## [2.4.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-feed@2.4.0...gatsby-plugin-feed@2.4.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-plugin-feed

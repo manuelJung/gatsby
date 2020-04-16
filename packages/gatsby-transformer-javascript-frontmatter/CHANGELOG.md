@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-javascript-frontmatter@2.1.2...gatsby-transformer-javascript-frontmatter@2.2.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-transformer-javascript-frontmatter:** use typescript parser instead of flow parser for typescript files ([#19271](https://github.com/gatsbyjs/gatsby/issues/19271)) ([97e5b2c](https://github.com/gatsbyjs/gatsby/commit/97e5b2c))
+- update dependency @babel/parser to ^7.6.0 ([#17620](https://github.com/gatsbyjs/gatsby/issues/17620)) ([2d942ed](https://github.com/gatsbyjs/gatsby/commit/2d942ed))
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+
 ## [2.2.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-javascript-frontmatter@2.2.0...gatsby-transformer-javascript-frontmatter@2.2.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-transformer-javascript-frontmatter

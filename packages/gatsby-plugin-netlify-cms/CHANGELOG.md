@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.3-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-netlify-cms@4.1.6...gatsby-plugin-netlify-cms@4.2.3-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **plugin-netlify-cms:** use 'netlify-identity.js' instead of 'netlify-identity-widget.js' ([#22387](https://github.com/gatsbyjs/gatsby/issues/22387)) ([2205811](https://github.com/gatsbyjs/gatsby/commit/2205811))
+- update dependency mini-css-extract-plugin ([#22320](https://github.com/gatsbyjs/gatsby/issues/22320)) ([d5c936e](https://github.com/gatsbyjs/gatsby/commit/d5c936e))
+- **gatsby-plugin-netlify-cms:** Mark relevant dependencies as externals ([#19575](https://github.com/gatsbyjs/gatsby/issues/19575)) ([8137255](https://github.com/gatsbyjs/gatsby/commit/8137255))
+- **gatsby-plugin-netlify-cms:** Prevent injected CSS clashes ([#21134](https://github.com/gatsbyjs/gatsby/issues/21134)) ([ee833b9](https://github.com/gatsbyjs/gatsby/commit/ee833b9))
+- **gatsby-plugin-netlify-cms:** use `require.resolve` for modules hoisting. ([#19860](https://github.com/gatsbyjs/gatsby/issues/19860)) ([1eb1584](https://github.com/gatsbyjs/gatsby/commit/1eb1584))
+- **netlify-cms-plugin:** remove preview styles from global context ([#20429](https://github.com/gatsbyjs/gatsby/issues/20429)) ([a4e5fb9](https://github.com/gatsbyjs/gatsby/commit/a4e5fb9))
+- **plugin-netlify-cms:** set global window vars required for Gatsby components ([#20264](https://github.com/gatsbyjs/gatsby/issues/20264)) ([06386b6](https://github.com/gatsbyjs/gatsby/commit/06386b6))
+- update dependency webpack to v4.41.1 ([#18504](https://github.com/gatsbyjs/gatsby/issues/18504)) ([a93df04](https://github.com/gatsbyjs/gatsby/commit/a93df04))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- update minor updates in packages except react, babel and eslint ([#17601](https://github.com/gatsbyjs/gatsby/issues/17601)) ([588cd8f](https://github.com/gatsbyjs/gatsby/commit/588cd8f))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-plugin-netlify-cms:** Add includeRobots ([#16662](https://github.com/gatsbyjs/gatsby/issues/16662)) ([9a5f71d](https://github.com/gatsbyjs/gatsby/commit/9a5f71d))
+- **gatsby-plugin-netlify-cms:** new option customizeWebpackConfig ([#17442](https://github.com/gatsbyjs/gatsby/issues/17442)) ([ffeed10](https://github.com/gatsbyjs/gatsby/commit/ffeed10))
+
 ## [4.2.2](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-netlify-cms@4.2.1...gatsby-plugin-netlify-cms@4.2.2) (2020-03-30)
 
 **Note:** Version bump only for package gatsby-plugin-netlify-cms

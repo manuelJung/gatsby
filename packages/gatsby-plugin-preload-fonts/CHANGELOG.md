@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.2-alpha.0 (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-plugin-preload-fonts:** lookup routes with and without trailing slash ([#21890](https://github.com/gatsbyjs/gatsby/issues/21890)) ([6475398](https://github.com/gatsbyjs/gatsby/commit/6475398)), closes [#21814](https://github.com/gatsbyjs/gatsby/issues/21814)
+- prettier for gatsby-plugin-preload-fonts ([69d2632](https://github.com/gatsbyjs/gatsby/commit/69d2632))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- update minor updates in packages except react, babel and eslint ([#17601](https://github.com/gatsbyjs/gatsby/issues/17601)) ([588cd8f](https://github.com/gatsbyjs/gatsby/commit/588cd8f))
+
+### Features
+
+- **gatsby-plugin-preload-fonts:** Add option to run in CI ([#21037](https://github.com/gatsbyjs/gatsby/issues/21037)) ([131f1e8](https://github.com/gatsbyjs/gatsby/commit/131f1e8))
+- **gatsby-plugin-preload-fonts:** preload used fonts ([#14608](https://github.com/gatsbyjs/gatsby/issues/14608)) ([5b2a76a](https://github.com/gatsbyjs/gatsby/commit/5b2a76a))
+- **gatsby-plugin-preload-fonts:** remove domain for self-hosted fonts ([#17235](https://github.com/gatsbyjs/gatsby/issues/17235)) ([5a107e9](https://github.com/gatsbyjs/gatsby/commit/5a107e9))
+
 ## [1.1.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-preload-fonts@1.1.0...gatsby-plugin-preload-fonts@1.1.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-plugin-preload-fonts

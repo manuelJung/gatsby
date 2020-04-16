@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-telemetry@1.1.7...gatsby-telemetry@1.2.3-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-telemetry:** suppress flush if disabled ([#20170](https://github.com/gatsbyjs/gatsby/issues/20170)) ([456b3db](https://github.com/gatsbyjs/gatsby/commit/456b3db))
+- **telemetry:** fix isTrackingEnabled always truthy ([#22613](https://github.com/gatsbyjs/gatsby/issues/22613)) ([5aaf296](https://github.com/gatsbyjs/gatsby/commit/5aaf296)), closes [#22531](https://github.com/gatsbyjs/gatsby/issues/22531)
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update dependency boxen to ^3.2.0 ([#16826](https://github.com/gatsbyjs/gatsby/issues/16826)) ([c2bc229](https://github.com/gatsbyjs/gatsby/commit/c2bc229))
+- update dependency boxen to v4 ([#19612](https://github.com/gatsbyjs/gatsby/issues/19612)) ([368d3c6](https://github.com/gatsbyjs/gatsby/commit/368d3c6))
+- update dependency configstore to v5 ([#17024](https://github.com/gatsbyjs/gatsby/issues/17024)) ([17e07cc](https://github.com/gatsbyjs/gatsby/commit/17e07cc))
+- update dependency envinfo to ^5.12.1 ([#16861](https://github.com/gatsbyjs/gatsby/issues/16861)) ([f0ab6cf](https://github.com/gatsbyjs/gatsby/commit/f0ab6cf))
+- update dependency envinfo to v7 ([#19537](https://github.com/gatsbyjs/gatsby/issues/19537)) ([265371d](https://github.com/gatsbyjs/gatsby/commit/265371d))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- **core:** Use present tense for telemetry message ([#17884](https://github.com/gatsbyjs/gatsby/issues/17884)) ([cb8b076](https://github.com/gatsbyjs/gatsby/commit/cb8b076))
+- update dependency fs-extra to v8 ([#17031](https://github.com/gatsbyjs/gatsby/issues/17031)) ([d891a19](https://github.com/gatsbyjs/gatsby/commit/d891a19))
+- update dependency is-docker to v2 ([#17036](https://github.com/gatsbyjs/gatsby/issues/17036)) ([930a043](https://github.com/gatsbyjs/gatsby/commit/930a043))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **gatsby-telemetry:** Add back fix and fix files in package.j… ([#16297](https://github.com/gatsbyjs/gatsby/issues/16297)) ([9d32f3c](https://github.com/gatsbyjs/gatsby/commit/9d32f3c))
+- **gatsby-telemetry:** Don't display analytics notification if opted out ([#16258](https://github.com/gatsbyjs/gatsby/issues/16258)) ([2b3a150](https://github.com/gatsbyjs/gatsby/commit/2b3a150))
+- **telemerty:** always show the telemetry notification, fixes… ([#16294](https://github.com/gatsbyjs/gatsby/issues/16294)) ([8db4f4c](https://github.com/gatsbyjs/gatsby/commit/8db4f4c))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby:** bundle and page-data stats for telemetry ([#20146](https://github.com/gatsbyjs/gatsby/issues/20146)) ([3fe97f2](https://github.com/gatsbyjs/gatsby/commit/3fe97f2))
+- **gatsby:** structured logging ([#14973](https://github.com/gatsbyjs/gatsby/issues/14973)) ([eafb8c6](https://github.com/gatsbyjs/gatsby/commit/eafb8c6))
+- **gatsby-core-utils:** Add isCI and getCIName ([#19039](https://github.com/gatsbyjs/gatsby/issues/19039)) ([d97bee6](https://github.com/gatsbyjs/gatsby/commit/d97bee6))
+- **gatsby-telemetry:** Make build collect GraphQL/Sift query data for telemetry ([#22540](https://github.com/gatsbyjs/gatsby/issues/22540)) ([1bec140](https://github.com/gatsbyjs/gatsby/commit/1bec140))
+- **telemetry:** Refactor and test CI detection and add support for heroku and now ([#17314](https://github.com/gatsbyjs/gatsby/issues/17314)) ([3e26ebd](https://github.com/gatsbyjs/gatsby/commit/3e26ebd))
+
+### Performance Improvements
+
+- **gatsby-telemetry:** Memoize the getRepositoryId ([#20472](https://github.com/gatsbyjs/gatsby/issues/20472)) ([d9b8fe8](https://github.com/gatsbyjs/gatsby/commit/d9b8fe8))
+
 ## [1.2.2](https://github.com/gatsbyjs/gatsby/compare/gatsby-telemetry@1.2.1...gatsby-telemetry@1.2.2) (2020-03-25)
 
 ### Features

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/babel-plugin-remove-graphql-queries@2.7.2...babel-plugin-remove-graphql-queries@2.8.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- dont remove query declaration hash, terser will remove it anyway and it can be useful for 3rd party tools ([#20672](https://github.com/gatsbyjs/gatsby/issues/20672)) ([150da45](https://github.com/gatsbyjs/gatsby/commit/150da45))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** Allow alternative import syntax for useStaticQuery ([#20330](https://github.com/gatsbyjs/gatsby/issues/20330)) ([17eaa72](https://github.com/gatsbyjs/gatsby/commit/17eaa72))
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby:** structured logging ([#14973](https://github.com/gatsbyjs/gatsby/issues/14973)) ([eafb8c6](https://github.com/gatsbyjs/gatsby/commit/eafb8c6))
+
 ## [2.8.1](https://github.com/gatsbyjs/gatsby/compare/babel-plugin-remove-graphql-queries@2.8.0...babel-plugin-remove-graphql-queries@2.8.1) (2020-03-23)
 
 **Note:** Version bump only for package babel-plugin-remove-graphql-queries

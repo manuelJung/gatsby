@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.10-alpha.0 (2020-04-16)
+
+### Bug Fixes
+
+- update dependency gatsby-plugin-theme-ui ([#22318](https://github.com/gatsbyjs/gatsby/issues/22318)) ([b8167de](https://github.com/gatsbyjs/gatsby/commit/b8167de))
+- update dependency theme-ui ([#22324](https://github.com/gatsbyjs/gatsby/issues/22324)) ([05af9d1](https://github.com/gatsbyjs/gatsby/commit/05af9d1))
+- **gatsby-theme-notes:** fix notes failing tests ([#21709](https://github.com/gatsbyjs/gatsby/issues/21709)) ([4f7424a](https://github.com/gatsbyjs/gatsby/commit/4f7424a))
+- **gatsby-theme-notes:** fix styling clash with gatsby-theme-blog ([#21656](https://github.com/gatsbyjs/gatsby/issues/21656)) ([62534f5](https://github.com/gatsbyjs/gatsby/commit/62534f5))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages ([#19087](https://github.com/gatsbyjs/gatsby/issues/19087)) ([294a48f](https://github.com/gatsbyjs/gatsby/commit/294a48f))
+
+### Features
+
+- Change mdx flag into mdxOtherwise to prevent confusion ([#21404](https://github.com/gatsbyjs/gatsby/issues/21404)) ([6874cca](https://github.com/gatsbyjs/gatsby/commit/6874cca))
+
 ## [1.2.9](https://github.com/gatsbyjs/gatsby/compare/gatsby-theme-notes@1.2.8...gatsby-theme-notes@1.2.9) (2020-03-30)
 
 **Note:** Version bump only for package gatsby-theme-notes

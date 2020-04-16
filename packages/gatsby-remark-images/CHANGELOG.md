@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-remark-images@3.1.7...gatsby-remark-images@3.2.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby:** Handle special characters in windows paths ([#19600](https://github.com/gatsbyjs/gatsby/issues/19600)) ([9929cf0](https://github.com/gatsbyjs/gatsby/commit/9929cf0))
+- **gatsby-remark-images:** add styles to webp `img` tags ([#20086](https://github.com/gatsbyjs/gatsby/issues/20086)) ([8227b0b](https://github.com/gatsbyjs/gatsby/commit/8227b0b))
+- update dependency cheerio to ^1.0.0-rc.3 ([#16831](https://github.com/gatsbyjs/gatsby/issues/16831)) ([55bee35](https://github.com/gatsbyjs/gatsby/commit/55bee35))
+- update dependency is-relative-url to v3 ([#17038](https://github.com/gatsbyjs/gatsby/issues/17038)) ([ff9ae84](https://github.com/gatsbyjs/gatsby/commit/ff9ae84))
+- update dependency slash to v3 ([#17019](https://github.com/gatsbyjs/gatsby/issues/17019)) ([c81f45c](https://github.com/gatsbyjs/gatsby/commit/c81f45c))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **gatsby-remark-images:** Allow alt to be returned as caption ([#16518](https://github.com/gatsbyjs/gatsby/issues/16518)) ([f09e82f](https://github.com/gatsbyjs/gatsby/commit/f09e82f))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-remark-images:** add disableBgImage option ([#19152](https://github.com/gatsbyjs/gatsby/issues/19152)) ([d3d9020](https://github.com/gatsbyjs/gatsby/commit/d3d9020))
+- **gatsby-remark-images:** Add flag to suppress css background-image to prevent FOUB ([#17154](https://github.com/gatsbyjs/gatsby/issues/17154)) ([125fd01](https://github.com/gatsbyjs/gatsby/commit/125fd01))
+- **gatsby-remark-images:** Add markdownCaptions option ([#16574](https://github.com/gatsbyjs/gatsby/issues/16574)) ([a72cbaf](https://github.com/gatsbyjs/gatsby/commit/a72cbaf))
+- **gatsby-remark-images:** Add support for native lazy loading ([#16448](https://github.com/gatsbyjs/gatsby/issues/16448)) ([47d8032](https://github.com/gatsbyjs/gatsby/commit/47d8032))
+
 ## [3.2.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-remark-images@3.2.0...gatsby-remark-images@3.2.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-remark-images

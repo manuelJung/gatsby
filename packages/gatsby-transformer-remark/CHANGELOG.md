@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-remark@2.6.9...gatsby-transformer-remark@2.7.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby:** Fix tracing so that everything happens under one span ([#16893](https://github.com/gatsbyjs/gatsby/issues/16893)) ([f8cae16](https://github.com/gatsbyjs/gatsby/commit/f8cae16))
+- **gatsby-core-utils:** make createContentDigest deterministic ([#19832](https://github.com/gatsbyjs/gatsby/issues/19832)) ([cb6d0e2](https://github.com/gatsbyjs/gatsby/commit/cb6d0e2))
+- **gatsby-transformer-remark:** Add fallback when markdown doesn't include excerpt_separator ([#16420](https://github.com/gatsbyjs/gatsby/issues/16420)) ([f77e233](https://github.com/gatsbyjs/gatsby/commit/f77e233))
+- **gatsby-transformer-remark:** Check key before trying to get cache ([#19288](https://github.com/gatsbyjs/gatsby/issues/19288)) ([8b8293d](https://github.com/gatsbyjs/gatsby/commit/8b8293d))
+- **gatsby-transformer-remark:** Don't produce invalid AST in TOC([#17080](https://github.com/gatsbyjs/gatsby/issues/17080)) ([6ba39ad](https://github.com/gatsbyjs/gatsby/commit/6ba39ad))
+- **gatsby-transformer-remark:** fix plugin conflict causing escaped HTML in headings ([#20024](https://github.com/gatsbyjs/gatsby/issues/20024)) ([1abcbb2](https://github.com/gatsbyjs/gatsby/commit/1abcbb2))
+- **gatsby-transformer-remark:** pass current textNode into recursive call to maintain reference ([#19546](https://github.com/gatsbyjs/gatsby/issues/19546)) ([c05b6d8](https://github.com/gatsbyjs/gatsby/commit/c05b6d8))
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby:** Schema rebuilding ([#19092](https://github.com/gatsbyjs/gatsby/issues/19092)) ([e4dae4d](https://github.com/gatsbyjs/gatsby/commit/e4dae4d))
+- **gatsby-remark-images:** Add markdownCaptions option ([#16574](https://github.com/gatsbyjs/gatsby/issues/16574)) ([a72cbaf](https://github.com/gatsbyjs/gatsby/commit/a72cbaf))
+- **gatsby-transformer-remark:** allow generating relative path in `tableOfContents` ([#18543](https://github.com/gatsbyjs/gatsby/issues/18543)) ([e65848c](https://github.com/gatsbyjs/gatsby/commit/e65848c))
+- **gatsby-transformer-remark:** Better timeToRead for Chinese/Japanese texts ([#21312](https://github.com/gatsbyjs/gatsby/issues/21312)) ([d677deb](https://github.com/gatsbyjs/gatsby/commit/d677deb))
+- **gatsby-transformer-remark:** fall back to pruneLength if n… ([#19137](https://github.com/gatsbyjs/gatsby/issues/19137)) ([fceb790](https://github.com/gatsbyjs/gatsby/commit/fceb790))
+- **gatsby-transformer-remark:** Handle CJK characters for tim… ([#18303](https://github.com/gatsbyjs/gatsby/issues/18303)) ([cc6acdf](https://github.com/gatsbyjs/gatsby/commit/cc6acdf))
+- **gatsby-transformer-remark:** subscribe to mimeTypes in defs([#16172](https://github.com/gatsbyjs/gatsby/issues/16172)) ([d80c273](https://github.com/gatsbyjs/gatsby/commit/d80c273))
+
 ## [2.7.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-transformer-remark@2.7.0...gatsby-transformer-remark@2.7.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-transformer-remark

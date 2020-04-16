@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-guess-js@1.1.3...gatsby-plugin-guess-js@1.2.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update dependency guess-webpack to ~0.4.1 ([#17598](https://github.com/gatsbyjs/gatsby/issues/17598)) ([c5cc361](https://github.com/gatsbyjs/gatsby/commit/c5cc361))
+- update dependency guess-webpack to ~0.4.17 ([#22319](https://github.com/gatsbyjs/gatsby/issues/22319)) ([770c365](https://github.com/gatsbyjs/gatsby/commit/770c365))
+- update dependency guess-webpack to ~0.4.7 ([#17787](https://github.com/gatsbyjs/gatsby/issues/17787)) ([7fffea9](https://github.com/gatsbyjs/gatsby/commit/7fffea9))
+- update dependency guess-webpack to ~0.4.8 ([#17933](https://github.com/gatsbyjs/gatsby/issues/17933)) ([4ed934c](https://github.com/gatsbyjs/gatsby/commit/4ed934c))
+- update dependency guess-webpack to ~0.4.9 ([#18537](https://github.com/gatsbyjs/gatsby/issues/18537)) ([a24b9ef](https://github.com/gatsbyjs/gatsby/commit/a24b9ef))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- **gatsby-plugin-guess-js:** don't leak jwt in gatsby-browser ([#18434](https://github.com/gatsbyjs/gatsby/issues/18434)) ([e99b961](https://github.com/gatsbyjs/gatsby/commit/e99b961))
+- **gatsby-plugin-guess-js:** Sanitise pluginOptions to remove jwt tokens ([#18397](https://github.com/gatsbyjs/gatsby/issues/18397)) ([5637cd6](https://github.com/gatsbyjs/gatsby/commit/5637cd6))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- update minor updates in packages except react, babel and eslint ([#17601](https://github.com/gatsbyjs/gatsby/issues/17601)) ([588cd8f](https://github.com/gatsbyjs/gatsby/commit/588cd8f))
+- update minor updates in packages except react, babel and eslint ([#17623](https://github.com/gatsbyjs/gatsby/issues/17623)) ([5bafdff](https://github.com/gatsbyjs/gatsby/commit/5bafdff))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+
 ## [1.2.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-guess-js@1.2.0...gatsby-plugin-guess-js@1.2.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-plugin-guess-js

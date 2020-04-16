@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-no-sourcemaps@2.1.1...gatsby-plugin-no-sourcemaps@2.2.1-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- correct links in package changelogs ([#15630](https://github.com/gatsbyjs/gatsby/issues/15630)) ([d07b9dd](https://github.com/gatsbyjs/gatsby/commit/d07b9dd))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+
 # [2.2.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-no-sourcemaps@2.1.2...gatsby-plugin-no-sourcemaps@2.2.0) (2020-03-20)
 
 ### Features

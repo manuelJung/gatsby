@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-cypress@0.2.3...gatsby-cypress@0.3.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **gatsby-plugin-offline:** Change navigation handler logic ([#13502](https://github.com/gatsbyjs/gatsby/issues/13502)) ([504b077](https://github.com/gatsbyjs/gatsby/commit/504b077))
+- **tests:** Remove unreliable timeout logic from development-runtime ([#16454](https://github.com/gatsbyjs/gatsby/issues/16454)) ([1166509](https://github.com/gatsbyjs/gatsby/commit/1166509))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+
 ## [0.3.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-cypress@0.3.0...gatsby-cypress@0.3.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-cypress

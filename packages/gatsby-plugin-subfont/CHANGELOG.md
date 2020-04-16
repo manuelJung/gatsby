@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-subfont@1.1.2...gatsby-plugin-subfont@2.1.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-plugin-subfont:** Make async, add configurable opti… ([#21768](https://github.com/gatsbyjs/gatsby/issues/21768)) ([06034f2](https://github.com/gatsbyjs/gatsby/commit/06034f2))
+
 ## [2.1.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-subfont@2.1.0...gatsby-plugin-subfont@2.1.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-plugin-subfont

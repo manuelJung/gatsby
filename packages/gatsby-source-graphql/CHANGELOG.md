@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-graphql@2.1.3...gatsby-source-graphql@2.3.1-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-source-graphql:** filter unused variables ([#20293](https://github.com/gatsbyjs/gatsby/issues/20293)) ([cb8d987](https://github.com/gatsbyjs/gatsby/commit/cb8d987)), closes [#20280](https://github.com/gatsbyjs/gatsby/issues/20280)
+- **gatsby-source-graphql:** use embedded remote schemas ([#20042](https://github.com/gatsbyjs/gatsby/issues/20042)) ([5bc8b79](https://github.com/gatsbyjs/gatsby/commit/5bc8b79))
+- update apollo graphql packages ([#16794](https://github.com/gatsbyjs/gatsby/issues/16794)) ([09f68f8](https://github.com/gatsbyjs/gatsby/commit/09f68f8))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- update minor updates in packages except react, babel and… ([#16960](https://github.com/gatsbyjs/gatsby/issues/16960)) ([d6bd515](https://github.com/gatsbyjs/gatsby/commit/d6bd515))
+- **gatsby:** Make root plural fields non nullable ([#15321](https://github.com/gatsbyjs/gatsby/issues/15321)) ([2c79309](https://github.com/gatsbyjs/gatsby/commit/2c79309))
+- **gatsby-source-graphql:** incorrect capitalization of Bearer ([#16468](https://github.com/gatsbyjs/gatsby/issues/16468)) ([37c7389](https://github.com/gatsbyjs/gatsby/commit/37c7389))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby:** use embedded remote schemas ([#19504](https://github.com/gatsbyjs/gatsby/issues/19504)) ([588eaf7](https://github.com/gatsbyjs/gatsby/commit/588eaf7))
+- **gatsby-source-graphql:** Allow override fetch ([#19630](https://github.com/gatsbyjs/gatsby/issues/19630)) ([2867fb2](https://github.com/gatsbyjs/gatsby/commit/2867fb2))
+- **gatsby-source-graphql:** Query batching ([#22347](https://github.com/gatsbyjs/gatsby/issues/22347)) ([2a4c7fd](https://github.com/gatsbyjs/gatsby/commit/2a4c7fd))
+
 # [2.3.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-graphql@2.2.1...gatsby-source-graphql@2.3.0) (2020-03-25)
 
 ### Features

@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.3-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-offline@2.2.4...gatsby-plugin-offline@3.1.3-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby:** Handle special characters in windows paths ([#19600](https://github.com/gatsbyjs/gatsby/issues/19600)) ([9929cf0](https://github.com/gatsbyjs/gatsby/commit/9929cf0))
+- **gatsby-plugin-offline:** Change navigation handler logic ([#13502](https://github.com/gatsbyjs/gatsby/issues/13502)) ([504b077](https://github.com/gatsbyjs/gatsby/commit/504b077))
+- **gatsby-plugin-offline:** Improve reliability of JS detection ([#18760](https://github.com/gatsbyjs/gatsby/issues/18760)) ([ae6eab3](https://github.com/gatsbyjs/gatsby/commit/ae6eab3))
+- **gatsby-plugin-offline:** prevent caching invalid relative paths ([#17406](https://github.com/gatsbyjs/gatsby/issues/17406)) ([19ee175](https://github.com/gatsbyjs/gatsby/commit/19ee175))
+- **gatsby-plugin-offline:** Replaced cacheOnly with cacheFirst ([#19926](https://github.com/gatsbyjs/gatsby/issues/19926)) ([7e842df](https://github.com/gatsbyjs/gatsby/commit/7e842df))
+- **gatsby-plugin-offline:** Run app-shell.js from user cache directory for pnp compatibility ([#22351](https://github.com/gatsbyjs/gatsby/issues/22351)) ([f8b7317](https://github.com/gatsbyjs/gatsby/commit/f8b7317))
+- **gatsby-plugin-offline:** set path resources on route update to ensure initial page is cached ([#17408](https://github.com/gatsbyjs/gatsby/issues/17408)) ([556c4cf](https://github.com/gatsbyjs/gatsby/commit/556c4cf))
+- **gatsby-plugin-offline:** Update incorrect casing for runtimeCachin… ([#19817](https://github.com/gatsbyjs/gatsby/issues/19817)) ([b44aca0](https://github.com/gatsbyjs/gatsby/commit/b44aca0))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- **gatsby-plugin-offline:** skip prefetching all resources ([#16691](https://github.com/gatsbyjs/gatsby/issues/16691)) ([e688b0c](https://github.com/gatsbyjs/gatsby/commit/e688b0c))
+- **gatsby-plugin-offline:** use base path instead of path prefix ([#17446](https://github.com/gatsbyjs/gatsby/issues/17446)) ([71437d6](https://github.com/gatsbyjs/gatsby/commit/71437d6))
+- update dependency cheerio to ^1.0.0-rc.3 ([#16831](https://github.com/gatsbyjs/gatsby/issues/16831)) ([55bee35](https://github.com/gatsbyjs/gatsby/commit/55bee35))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-plugin-offline:** "Magic" JS detection to make sites function correctly when JS is disabled retroactively ([#17590](https://github.com/gatsbyjs/gatsby/issues/17590)) ([e451815](https://github.com/gatsbyjs/gatsby/commit/e451815))
+- **gatsby-plugin-offline:** Allow appending custom scripts ([#11626](https://github.com/gatsbyjs/gatsby/issues/11626)) ([275344e](https://github.com/gatsbyjs/gatsby/commit/275344e))
+- **gatsby-plugin-offline:** Allow configuring Workbox debug m… ([#18123](https://github.com/gatsbyjs/gatsby/issues/18123)) ([3c18b9f](https://github.com/gatsbyjs/gatsby/commit/3c18b9f))
+- **gatsby-plugin-offline:** Allow precaching custom pages ([#16877](https://github.com/gatsbyjs/gatsby/issues/16877)) ([12b5f75](https://github.com/gatsbyjs/gatsby/commit/12b5f75))
+- **gatsby-plugin-offline:** Merge workboxConfig and default o… ([#19437](https://github.com/gatsbyjs/gatsby/issues/19437)) ([8791329](https://github.com/gatsbyjs/gatsby/commit/8791329))
+
 ## [3.1.2](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-offline@3.1.1...gatsby-plugin-offline@3.1.2) (2020-03-26)
 
 **Note:** Version bump only for package gatsby-plugin-offline

@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.4-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-wordpress@3.1.11...gatsby-source-wordpress@3.2.4-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update dependency axios to ^0.19.2 ([#22317](https://github.com/gatsbyjs/gatsby/issues/22317)) ([91e780f](https://github.com/gatsbyjs/gatsby/commit/91e780f))
+- **docs:** improve WordPress tutorial ([#20520](https://github.com/gatsbyjs/gatsby/issues/20520)) ([d5253f2](https://github.com/gatsbyjs/gatsby/commit/d5253f2))
+- **gatsby-source-wordpress:** Cannot read property of undefined error with polylang ([#19331](https://github.com/gatsbyjs/gatsby/issues/19331)) ([bd48b21](https://github.com/gatsbyjs/gatsby/commit/bd48b21)), closes [gatsbyjs#19285](https://github.com/gatsbyjs/issues/19285)
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- **gatsby-source-wordpress:** add undefined check to avoid mapPostsToTagsCategories error ([#18895](https://github.com/gatsbyjs/gatsby/issues/18895)) ([ad646d6](https://github.com/gatsbyjs/gatsby/commit/ad646d6))
+- update dependency better-queue to ^3.8.10 ([#16824](https://github.com/gatsbyjs/gatsby/issues/16824)) ([6834344](https://github.com/gatsbyjs/gatsby/commit/6834344))
+- update dependency bluebird to ^3.5.5 ([#16825](https://github.com/gatsbyjs/gatsby/issues/16825)) ([ec0be83](https://github.com/gatsbyjs/gatsby/commit/ec0be83))
+- update dependency bluebird to ^3.7.0 ([#18029](https://github.com/gatsbyjs/gatsby/issues/18029)) ([bd235a8](https://github.com/gatsbyjs/gatsby/commit/bd235a8))
+- update dependency qs to ^6.9.0 ([#17802](https://github.com/gatsbyjs/gatsby/issues/17802)) ([8119d4b](https://github.com/gatsbyjs/gatsby/commit/8119d4b))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-source-wordpress:** Ability to set a custom rest api route prefix ([#20998](https://github.com/gatsbyjs/gatsby/issues/20998)) ([789fb1c](https://github.com/gatsbyjs/gatsby/commit/789fb1c))
+- **gatsby-source-wordpress:** Add keepMediaDetails ([#15862](https://github.com/gatsbyjs/gatsby/issues/15862)) ([1b89f31](https://github.com/gatsbyjs/gatsby/commit/1b89f31))
+- **gatsby-source-wordpress:** add normalizers option to modif… ([#18079](https://github.com/gatsbyjs/gatsby/issues/18079)) ([2f67bce](https://github.com/gatsbyjs/gatsby/commit/2f67bce))
+
 ## [3.2.3](https://github.com/gatsbyjs/gatsby/compare/gatsby-source-wordpress@3.2.2...gatsby-source-wordpress@3.2.3) (2020-03-30)
 
 **Note:** Version bump only for package gatsby-source-wordpress

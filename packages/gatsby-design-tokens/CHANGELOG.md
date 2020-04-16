@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-design-tokens@1.0.0...gatsby-design-tokens@2.0.5-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby-design-tokens:** Add "Inter" font stack ([#21598](https://github.com/gatsbyjs/gatsby/issues/21598)) ([b870db9](https://github.com/gatsbyjs/gatsby/commit/b870db9))
+- **gatsby-design-tokens:** v2 ([#21240](https://github.com/gatsbyjs/gatsby/issues/21240)) ([f754fc2](https://github.com/gatsbyjs/gatsby/commit/f754fc2))
+
+### BREAKING CHANGES
+
+- **gatsby-design-tokens:** `fonts.sans` now delivers the "Inter" font stack, not the `system` font stack anymore
+  fix: `fonts.sans` and `.brand` aliases
+
 ## [2.0.4](https://github.com/gatsbyjs/gatsby/compare/gatsby-design-tokens@2.0.3...gatsby-design-tokens@2.0.4) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-design-tokens

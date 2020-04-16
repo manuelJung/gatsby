@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-remark-copy-linked-files@2.1.3...gatsby-remark-copy-linked-files@2.2.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update dependency cheerio to ^1.0.0-rc.3 ([#16831](https://github.com/gatsbyjs/gatsby/issues/16831)) ([55bee35](https://github.com/gatsbyjs/gatsby/commit/55bee35))
+- update dependency fs-extra to ^4.0.3 ([#16876](https://github.com/gatsbyjs/gatsby/issues/16876)) ([2cc762d](https://github.com/gatsbyjs/gatsby/commit/2cc762d))
+- update dependency fs-extra to v8 ([#17031](https://github.com/gatsbyjs/gatsby/issues/17031)) ([d891a19](https://github.com/gatsbyjs/gatsby/commit/d891a19))
+- update dependency is-relative-url to v3 ([#17038](https://github.com/gatsbyjs/gatsby/issues/17038)) ([ff9ae84](https://github.com/gatsbyjs/gatsby/commit/ff9ae84))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-remark-copy-linked-files:** Add support for poster attribute in video elements ([#22032](https://github.com/gatsbyjs/gatsby/issues/22032)) ([70fd0eb](https://github.com/gatsbyjs/gatsby/commit/70fd0eb))
+- **gatsby-remark-copy-linked-files:** change default destinationDir and allow override via config ([#16508](https://github.com/gatsbyjs/gatsby/issues/16508)) ([19eab87](https://github.com/gatsbyjs/gatsby/commit/19eab87))
+
 ## [2.2.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-remark-copy-linked-files@2.2.0...gatsby-remark-copy-linked-files@2.2.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-remark-copy-linked-files

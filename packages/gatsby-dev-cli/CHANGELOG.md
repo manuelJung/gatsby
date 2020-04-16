@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-dev-cli@2.5.7...gatsby-dev-cli@2.6.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **docs:** remove double words ([#22494](https://github.com/gatsbyjs/gatsby/issues/22494)) ([75f6ee2](https://github.com/gatsbyjs/gatsby/commit/75f6ee2))
+- **gatsby-dev-cli:** chmod gatsby bin on copy ([#19985](https://github.com/gatsbyjs/gatsby/issues/19985)) ([a4d1126](https://github.com/gatsbyjs/gatsby/commit/a4d1126))
+- **gatsby-dev-cli:** Default to no dependencies before running diff ([#19085](https://github.com/gatsbyjs/gatsby/issues/19085)) ([3267141](https://github.com/gatsbyjs/gatsby/commit/3267141))
+- **gatsby-dev-cli:** Include theme src directories ([#22147](https://github.com/gatsbyjs/gatsby/issues/22147)) ([8dab4c3](https://github.com/gatsbyjs/gatsby/commit/8dab4c3))
+- update dependency chokidar to v3 ([#16975](https://github.com/gatsbyjs/gatsby/issues/16975)) ([816d475](https://github.com/gatsbyjs/gatsby/commit/816d475))
+- update dependency chokidar to v3.2.1 ([#18009](https://github.com/gatsbyjs/gatsby/issues/18009)) ([4df0306](https://github.com/gatsbyjs/gatsby/commit/4df0306))
+- update dependency configstore to ^3.1.2 ([#16837](https://github.com/gatsbyjs/gatsby/issues/16837)) ([5979677](https://github.com/gatsbyjs/gatsby/commit/5979677))
+- update dependency configstore to v5 ([#17024](https://github.com/gatsbyjs/gatsby/issues/17024)) ([17e07cc](https://github.com/gatsbyjs/gatsby/commit/17e07cc))
+- update dependency del to v5 ([#17026](https://github.com/gatsbyjs/gatsby/issues/17026)) ([47b2d86](https://github.com/gatsbyjs/gatsby/commit/47b2d86))
+- update dependency execa to ^2.0.5 ([#18106](https://github.com/gatsbyjs/gatsby/issues/18106)) ([db8d4a8](https://github.com/gatsbyjs/gatsby/commit/db8d4a8))
+- update dependency execa to ^2.1.0 ([#18369](https://github.com/gatsbyjs/gatsby/issues/18369)) ([e05096e](https://github.com/gatsbyjs/gatsby/commit/e05096e))
+- update dependency execa to v2 ([#17029](https://github.com/gatsbyjs/gatsby/issues/17029)) ([59d3472](https://github.com/gatsbyjs/gatsby/commit/59d3472))
+- update dependency execa to v3 ([#19532](https://github.com/gatsbyjs/gatsby/issues/19532)) ([ae50422](https://github.com/gatsbyjs/gatsby/commit/ae50422))
+- update dependency fs-extra to ^4.0.3 ([#16876](https://github.com/gatsbyjs/gatsby/issues/16876)) ([2cc762d](https://github.com/gatsbyjs/gatsby/commit/2cc762d))
+- update dependency fs-extra to v8 ([#17031](https://github.com/gatsbyjs/gatsby/issues/17031)) ([d891a19](https://github.com/gatsbyjs/gatsby/commit/d891a19))
+- update dependency is-absolute to v1 ([#17035](https://github.com/gatsbyjs/gatsby/issues/17035)) ([9c3d1f9](https://github.com/gatsbyjs/gatsby/commit/9c3d1f9))
+- update dependency verdaccio to ^4.3.1 ([#18032](https://github.com/gatsbyjs/gatsby/issues/18032)) ([5cb1c4e](https://github.com/gatsbyjs/gatsby/commit/5cb1c4e))
+- update dependency verdaccio to ^4.3.3 ([#18064](https://github.com/gatsbyjs/gatsby/issues/18064)) ([cea1fb8](https://github.com/gatsbyjs/gatsby/commit/cea1fb8))
+- update dependency verdaccio to v4 ([#17020](https://github.com/gatsbyjs/gatsby/issues/17020)) ([b05f060](https://github.com/gatsbyjs/gatsby/commit/b05f060))
+- update dependency verdaccio to v4 ([#17367](https://github.com/gatsbyjs/gatsby/issues/17367)) ([fc2aa48](https://github.com/gatsbyjs/gatsby/commit/fc2aa48))
+- update minor updates in packages ([#18875](https://github.com/gatsbyjs/gatsby/issues/18875)) ([b692879](https://github.com/gatsbyjs/gatsby/commit/b692879))
+- update minor updates in packages ([#19080](https://github.com/gatsbyjs/gatsby/issues/19080)) ([95e908e](https://github.com/gatsbyjs/gatsby/commit/95e908e))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **gatsby-dev-cli:** Minor typo fix in comment ([#17149](https://github.com/gatsbyjs/gatsby/issues/17149)) ([2aa76a6](https://github.com/gatsbyjs/gatsby/commit/2aa76a6))
+- **gatsby-dev-cli:** typo ([#17176](https://github.com/gatsbyjs/gatsby/issues/17176)) ([b0e9eaf](https://github.com/gatsbyjs/gatsby/commit/b0e9eaf))
+- **gatsby-dev-cli:** typo ([#17177](https://github.com/gatsbyjs/gatsby/issues/17177)) ([a092f0e](https://github.com/gatsbyjs/gatsby/commit/a092f0e))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-dev-cli:** Add --version ([#19459](https://github.com/gatsbyjs/gatsby/issues/19459)) ([38af21a](https://github.com/gatsbyjs/gatsby/commit/38af21a))
+
 ## [2.6.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-dev-cli@2.6.0...gatsby-dev-cli@2.6.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-dev-cli

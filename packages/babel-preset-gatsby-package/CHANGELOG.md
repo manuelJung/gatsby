@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/babel-preset-gatsby-package@0.2.2...babel-preset-gatsby-package@0.3.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **babel-preset-gatsby-package:** remove node-env check as it's alway… ([#20509](https://github.com/gatsbyjs/gatsby/issues/20509)) ([bafa160](https://github.com/gatsbyjs/gatsby/commit/bafa160))
+- update dependency babel-plugin-dynamic-import-node to v2 ([#19535](https://github.com/gatsbyjs/gatsby/issues/19535)) ([500ebf6](https://github.com/gatsbyjs/gatsby/commit/500ebf6))
+- update dependency core-js to ^2.6.10 ([#18569](https://github.com/gatsbyjs/gatsby/issues/18569)) ([7a20eb7](https://github.com/gatsbyjs/gatsby/commit/7a20eb7))
+- **babel-preset-gatsby-package:** Add corejs to config ([#17723](https://github.com/gatsbyjs/gatsby/issues/17723)) ([889ae3a](https://github.com/gatsbyjs/gatsby/commit/889ae3a))
+- **babel-preset-gatsby-package:** apply "corejs" only to non-browser target ([#17727](https://github.com/gatsbyjs/gatsby/issues/17727)) ([553a3a5](https://github.com/gatsbyjs/gatsby/commit/553a3a5))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby:** support nullish coalescing operator in gatsby ([#20010](https://github.com/gatsbyjs/gatsby/issues/20010)) ([a898a77](https://github.com/gatsbyjs/gatsby/commit/a898a77))
+
 ## [0.3.1](https://github.com/gatsbyjs/gatsby/compare/babel-preset-gatsby-package@0.3.0...babel-preset-gatsby-package@0.3.1) (2020-03-23)
 
 **Note:** Version bump only for package babel-preset-gatsby-package

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.2-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-remark-prismjs@3.3.3...gatsby-remark-prismjs@3.4.2-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-remark-primsjs:** Support overriding prompt user/host. ([#16421](https://github.com/gatsbyjs/gatsby/issues/16421)) ([02f861b](https://github.com/gatsbyjs/gatsby/commit/02f861b))
+- **gatsby-remark-prism-js:** add additional html escapes ([#20156](https://github.com/gatsbyjs/gatsby/issues/20156)) ([c484c04](https://github.com/gatsbyjs/gatsby/commit/c484c04))
+- **gatsby-remark-prismjs:** add show invisibles plugin ([#21439](https://github.com/gatsbyjs/gatsby/issues/21439)) ([5b523bd](https://github.com/gatsbyjs/gatsby/commit/5b523bd))
+- **gatsby-remark-prismjs:** Add support for Prism command-lin… ([#16170](https://github.com/gatsbyjs/gatsby/issues/16170)) ([a1c8fdd](https://github.com/gatsbyjs/gatsby/commit/a1c8fdd))
+
 ## [3.4.1](https://github.com/gatsbyjs/gatsby/compare/gatsby-remark-prismjs@3.4.0...gatsby-remark-prismjs@3.4.1) (2020-03-23)
 
 **Note:** Version bump only for package gatsby-remark-prismjs

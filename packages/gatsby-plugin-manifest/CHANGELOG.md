@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.4-alpha.0](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-manifest@2.2.4...gatsby-plugin-manifest@2.3.4-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- **gatsby-plugin-manifest:** fixes icons not getting asset pre… ([#20142](https://github.com/gatsbyjs/gatsby/issues/20142)) ([0e8ed07](https://github.com/gatsbyjs/gatsby/commit/0e8ed07))
+- **gatsby-plugin-manifest:** Only reassign start_url if it already exists ([#21012](https://github.com/gatsbyjs/gatsby/issues/21012)) ([dd96604](https://github.com/gatsbyjs/gatsby/commit/dd96604))
+- update dependency sharp to ^0.23.1 ([#17904](https://github.com/gatsbyjs/gatsby/issues/17904)) ([f19ad3c](https://github.com/gatsbyjs/gatsby/commit/f19ad3c))
+- update minor updates in packages ([#19087](https://github.com/gatsbyjs/gatsby/issues/19087)) ([294a48f](https://github.com/gatsbyjs/gatsby/commit/294a48f))
+- update minor updates in packages except react, babel and eslint ([#17254](https://github.com/gatsbyjs/gatsby/issues/17254)) ([252d867](https://github.com/gatsbyjs/gatsby/commit/252d867))
+- **gatsby:** Fix tracing so that everything happens under one span ([#16893](https://github.com/gatsbyjs/gatsby/issues/16893)) ([f8cae16](https://github.com/gatsbyjs/gatsby/commit/f8cae16))
+
+### Features
+
+- **gatsby:** bump node min version to 10.13.0 ([#22400](https://github.com/gatsbyjs/gatsby/issues/22400)) ([83d681a](https://github.com/gatsbyjs/gatsby/commit/83d681a))
+- **gatsby-plugin-manifest:** Update manifest on navigation ([#17426](https://github.com/gatsbyjs/gatsby/issues/17426)) ([f88a9e2](https://github.com/gatsbyjs/gatsby/commit/f88a9e2)), closes [#13471](https://github.com/gatsbyjs/gatsby/issues/13471)
+
 ## [2.3.3](https://github.com/gatsbyjs/gatsby/compare/gatsby-plugin-manifest@2.3.2...gatsby-plugin-manifest@2.3.3) (2020-03-26)
 
 **Note:** Version bump only for package gatsby-plugin-manifest
